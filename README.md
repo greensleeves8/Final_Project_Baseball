@@ -63,3 +63,15 @@ The following various technologies will be used throughout the completion of thi
 ## Visualizations
 
 ## Deployment
+For User-Facing purposes - a combination of 
+- HTML 
+- CSS 
+- Bootstrap 
+- JS 
+- Python
+- Flask 
+have been utilized to build a dynamic webpage that with current functionality to 
+- Scrape the top article from the Basball Hall of Fame's website
+- As well as pictures from the Hall's image gallery
+- Create a dropdown list of Hall of Fame candidates throughout the history of baseball.
+- Additional functionality to be added shortly!
