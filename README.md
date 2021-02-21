@@ -58,7 +58,9 @@ The following various technologies will be used throughout the completion of thi
 ## Data Exploration
 
 ## Extract, Transform, Load
+Pitching ETL:
 
+- Within the Career_Pitching_df our first focus was to read in and merge our pitching and Hall of Fame CSV’s.  We cleaned up the data by removing players who would not qualify for the Hall of Fame based on their time played in the MLB. This allowed us to then focus on the stats that are important in determining what a Hall of Fame player should look like. Not every statistic we wanted was provided so we had to add several columns to our data frame.   Some of the stats we wanted to make sure we added were pitchers' Inning Pitched (IP), Win Percentage, Strikeout to Walk Ratio, and Walks Plus Hits Per Inning Pitched (WHIP).
 ## Database
 
 ## Machine Learning Model
