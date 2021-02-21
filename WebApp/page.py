@@ -3,19 +3,18 @@ from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import hof_scraping
 
-app = Flask(__name__)
-app.debug = True
+page = Flask(__name__)
 
 # Use pymongo to set up mongo conection
 
 
-app.config["MONGO_URI"] = "mongodb://localhost:27017/halldb"
-mongo = PyMongo(app)
+page.config["MONGO_URI"] = "mongodb://localhost:27017/halldb"
+mongo = PyMongo(page)
 
 # Seting up home route
 
 
-@app.route("/")
+@page.route("/")
 def index():
     hall = mongo.db.hall.find_one()
     return render_template("index.html", hall=hall)
@@ -24,7 +23,7 @@ def index():
 # Create a scraping route (connect it to button?)
 
 
-@app.route("/scrape")
+@page.route("/scrape")
 def scrape():
     hall = mongo.db.hall
     hall_data = hof_scraping.scrape_all()
@@ -34,4 +33,4 @@ def scrape():
 
 
 if __name__ == "__main__":
-    app.run()
+    page.run()
