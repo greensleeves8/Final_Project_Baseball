@@ -53,6 +53,8 @@ The following various technologies will be used throughout the completion of thi
 ## Resources
 
 [Baseball-Reference.com: MLB Stats, Scores, History, and Records](https://www.baseball-reference.com/ "Baseball-Reference.com")
+
+
 [Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/ "Sean Lahman's Baseball Database")
 
 ## Data Exploration
@@ -86,11 +88,11 @@ have been utilized to build a dynamic webpage that with current functionality to
 Heroku is a cloud-based service that has the functionality to connect to Github, which creates automatic deployment of our project.  
 Continuous code can be committed to the repository and then deployed within the Heroku platform by initially setting up the following files:
 * h_app: is the app folder created to contain the flask app and supporting templates
-	*__init__.py: the file that creates the flask app and additional routes
-	*templates: the folder created within the app folder to organize html files
-		*base.html: creates the initial structure for our webpage
-		*index.html: an extension from our base.html and contains the main content
-*Procfile: this is file specifically used for Heroku to create the webserver and initialize the starting point
-*requirements.txt: this text file shows all the packages being used 
-*wsgi.py: this file imports our flask app
+	* __init__.py: the file that creates the flask app and additional routes
+	* templates: the folder created within the app folder to organize html files
+		* base.html: creates the initial structure for our webpage
+		* index.html: an extension from our base.html and contains the main content
+* Procfile: this is file specifically used for Heroku to create the webserver and initialize the starting point
+* requirements.txt: this text file shows all the packages being used 
+* wsgi.py: this file imports our flask app
 
