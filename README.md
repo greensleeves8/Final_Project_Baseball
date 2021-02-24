@@ -1,4 +1,5 @@
-# Machine Learning and the Hall of Fame
+<p align="center"> ![image](Images/nb_logo.png) </p>
+### <p align="center"> Machine Learning and the Baseballhall of Fame </p>
 ## Introduction
 
 The National Baseball Hall of Fame inducted its first eligible members in 1936.  Soon after, in 1939, the Baseball Hall of Fame Museum was opened in Cooperstown, NY.  Since its establishment, each year members of the Baseball Writer's Association of America (BBWAA) vote on eligible candidates to be inducted into the Baseball Hall of Fame.  Major League Baseball players are considered eligible candidates if the baseball player:
@@ -10,7 +11,7 @@ The National Baseball Hall of Fame inducted its first eligible members in 1936. 
 
 Once a candidate is deemed eligible, multiple criteria are taken into consideration when voting occurs, such as the player's record/statistics, ability, integrity, and contribution to a team.  Members of the BBWAA cast no more than 10 votes on each years ballot for the candidates of their choosing.  Any candidate that receives votes on at least 75% of the ballots will be inducted to the Hall of Fame.
 
-**Team members:** Cale Green, Camille Goodwin, Claire Davis, Matt Martin, Silas Cobb, Trey Wehrmeyer
+:baseball: **Team members:** Cale Green, Camille Goodwin, Claire Davis, Matt Martin, Silas Cobb, Trey Wehrmeyer :baseball:
 
 ## Can Machine Learning be used to identify MLB Hall of Famers?
 
@@ -31,6 +32,7 @@ Taking into consideration the process and requirements of being inducted into th
   - [Visualizations](#visualizations)
   - [Deployment](#deployment)
     - [Heroku](#heroku)
+  - [Credits](#credits)
 
 ## Communication
 
@@ -57,6 +59,9 @@ The following various technologies will be used throughout the completion of thi
 
 
 [Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/ "Sean Lahman's Baseball Database")
+
+
+[Baseball Hall](https://baseballhall.org/)
 
 ## Data Exploration
 
@@ -143,3 +148,6 @@ Continuous code can be committed to the repository and then deployed within the 
 * requirements.txt: this text file shows all the packages being used 
 * wsgi.py: this file imports our flask app
 
+## Credits
+
+“Homepage: Logo Image.” Baseball Hall of Fame, 23 Feb. 2021, baseballhall.org/. 
