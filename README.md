@@ -61,9 +61,15 @@ The following various technologies will be used throughout the completion of thi
 ## Data Exploration
 
 ## Extract, Transform, Load
+
+Batting ETL:
+
+- When creating our Career_Batting_df we started by reading in and merging the batting and Hall of Fame CSV’s. In order to clean up the data, we took out columns that had high null values. There were several key statistics that we needed to add such as Batting Average(AVG), On Base Percentage(OBP), and Slugging Percentage(SLG).
+- One of the issues we ran into on the Career_Batting_df was making our filter too narrow. We started by creating a filter of 2,000 at-bats(Ab) or higher and this ended up dropping our eligible player much lower than we wanted. We ended up filtering out any player who did not have an AB in the MLB since that helped eliminate pitchers and players with limited or no batting stats.
+
 Pitching ETL:
 
-- Within the Career_Pitching_df our first focus was to read in and merge our pitching and Hall of Fame CSV’s.  We cleaned up the data by removing players who would not qualify for the Hall of Fame based on their time played in the MLB. This allowed us to then focus on the stats that are important in determining what a Hall of Fame player should look like. Not every statistic we wanted was provided so we had to add several columns to our data frame.   Some of the stats we wanted to make sure we added were pitchers' Inning Pitched (IP), Win Percentage, Strikeout to Walk Ratio, and Walks Plus Hits Per Inning Pitched (WHIP).
+- Within the Career_Pitching_df our first focus was similar to before where we read in and merged our pitching and Hall of Fame CSV’s.  We cleaned up the data by removing players who would not qualify for the Hall of Fame based on their time played in the MLB. This allowed us to then focus on the stats that are important in determining what a Hall of Fame player should look like. Not every statistic we wanted was provided so we had to add several columns to our data frame.   Some of the stats we wanted to make sure we added were pitchers' Inning Pitched (IP), Win Percentage, Strikeout to Walk Ratio, and Walks Plus Hits Per Inning Pitched (WHIP).
 - We did run into an issue early on when creating the Career_Pitching_df.  We found that the CSV file did not have the correct pitcher ERA because the IPOuts column was not in its final form.  We had to add an IP column by dividing the IPOuts by three.
 ## Database
 
