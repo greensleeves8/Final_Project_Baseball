@@ -30,6 +30,7 @@ Taking into consideration the process and requirements of being inducted into th
   - [Machine Learning Model](#machine-learning-model)
   - [Visualizations](#visualizations)
   - [Deployment](#deployment)
+    - [Heroku](#heroku)
 
 ## Communication
 
@@ -67,6 +68,46 @@ Pitching ETL:
 ## Database
 
 ## Machine Learning Model
+
+The ideal machine learning model for determining Baseball Hall of Fame inductees is one that has a high precision score, exemplifying the model's ability to make predictions that are correct (if predicted to be in Hall of Fame, how likely it is true).  In addition, the higher a recall score for the model, demonstrates the model's capability of finding worthy candidates for the Hall of Fame within a given dataset (finding a yes in a sea of no's).  Focusing on the model's ability to predict whether a player has been or will be inducted to the Hall of Fame is more important than the model's ability to predict if a player has not or will not be inducted into the Hall of Fame.  After testing various machine learning models and adjusting the parameters for the models, the results of two in particular should be compared.  
+
+Prior to developing and running the machine learning models, the same preprocessing steps were applied to the dataset for each model:
+
+* The **inducted** column is converted from values of Y and N, to 1 and 0 respectively- enabling the models to classify baseball players' inducted status numerically.
+* The target variable, **y**, is assigned to the "inducted column".
+* The features, **X**, is assigned to the remaining columns of baseball player stats.
+* The assigned variables are then split into training and testing sets, utizlizing **train_test_split** from scikit-learn.
+* Finally, **X** is then scaled so that all statistics within the datset fall within the same range of values, helping the model interpret the data more accurately.  
+
+Once preprocessing the data was complete, the Random Forest Classifier and Logisitic Regression machine learning models were used to make predictions on baseball players being inducted into the Hall of Fame.  The Random Forest Classifier performed quite well initially with a 96.7% accuracy, 0.75 precision and 0.59 recall for being inducted into the Hall of Fame.  Adjustments were made to the sampling sizes in an effort to bring balance to the overwhelming amount of baseball players not inducted into the Hall of Fame.  Below are the results:
+
+
+| Model and Sampling Method | Accuracy | Yes/No |Precision | Recall | F-1 Score | | | Confusion Matrix | |
+| --------------- | -------- | ------ |--------- | ------ | --------- | - | - | - | - |
+| *Random Forest Classifier (RFC)* | 96.7% | *No* | 1.00 | 1.00 | 1.00 | | | *Predicted No* | *Predicted Yes* |
+| | | *Yes* | 0.71 | 0.59 | 0.65 | | *Actual No* | 4335 | 8 |
+| | | | | | | | *Actual Yes* | 14 | 20 |
+| *RFC with Random Oversampling* | 99.2% | *No* | 1.00 | 1.00 | 1.00 | | | *Predicted No* | *Predicted Yes* |
+| | | *Yes* | 0.50 | 0.53 | 0.51 | | *Actual No* | 4325 | 18 |
+| | | | | | | | *Actual Yes*| 16 | 18 |
+| *RFC with Random Undersampling* | 95.3% | *No* | 1.00 | 0.95 | 0.98 | | | *Predicted No* | *Predicted Yes* |
+| | | *Yes* | 0.14 | 1.00 | 0.25 | | *Actual No* | 4138 | 205 |
+| | | | | | | | *Actual Yes* | 0 | 34 |
+| *RFC with SMOTE* | 98.5% | *No* | 1.00 | 0.99 | 0.99 | | | *Predicted No* | *Predicted Yes* |
+| | | *Yes* | 0.31 | 0.76 | 0.44 | | *Actual No* | 4285 | 58 |
+| | | | | | | | *Actual Yes* | 8 | 26 |
+| *RFC with SMOTEEN* | 98.2% | *No* | 1.00 | 0.98 | 0.99 | | | *Predicted No* | *Predicted Yes* |
+| | | *Yes* | 0.28 | 0.82 | 0.42 | | *Actual No* | 4271 | 72 |
+| | | | | | | | *Actual Yes* | 6 | 28 |
+| *RFC with Cluster Centroids* | 98.1% | *No* | 1.00 | 0.98 | 0.99 | | | *Predicted No* | *Predicted Yes* |
+| | | *Yes* | 0.27 | 0.88 | 0.41 | | *Actual No* | 4262 | 81 |
+| | | | | | | | *Actual Yes* | 4 | 30 |
+| *Logistic Regression* | 99.4% | *No* | 1.00 | 1.00 | 1.00 | | | *Predicted No* | *Predicted Yes* |
+| | | *Yes* | 0.59 | 0.56 | 0.58 | | *Actual No* | 4330 | 13 |
+| | | | | | | | *Actual Yes* | 15 | 19 |
+| *Logistic Regression with 75% Threshold* | 99.4% | *No* | 0.99 | 1.00 | 1.00 | | | *Predicted No* | *Predicted Yes* |
+| | | *Yes* | 0.71 | 0.35 | 0.47 | | *Actual No* | 4338 | 5 |
+| | | | | | | | *Actual Yes* | 22 | 12 |
 
 ## Visualizations
 
