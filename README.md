@@ -1,5 +1,8 @@
-<p align="center"> ![image](Images/nb_logo.png) </p>
-### <p align="center"> Machine Learning and the Baseballhall of Fame </p>
+<p align="center"> 
+  <img src="Images/nb_logo.png">
+</p>
+ <p align="center"> Machine Learning and the Baseball Hall of Fame </p>
+
 ## Introduction
 
 The National Baseball Hall of Fame inducted its first eligible members in 1936.  Soon after, in 1939, the Baseball Hall of Fame Museum was opened in Cooperstown, NY.  Since its establishment, each year members of the Baseball Writer's Association of America (BBWAA) vote on eligible candidates to be inducted into the Baseball Hall of Fame.  Major League Baseball players are considered eligible candidates if the baseball player:
