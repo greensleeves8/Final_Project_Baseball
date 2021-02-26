@@ -25,25 +25,44 @@ Taking into consideration the process and requirements of being inducted into th
 ---
 # Resources
 
-Sean Lahman's Baseball Database
+
+*[Sean Lahman's Baseball Databse](http://www.seanlahman.com/baseball-archive/statistics/)*
+
+*[Baseball Reference](https://www.baseball-reference.com/)*
+
+*[Baseball Hall](https://baseballhall.org/)*
 
 Tables Used:
-
 - Pitching.csv
 - Batting.csv
 - HallOfFame.csv
 
+
 ---
 # ETL
+Batting ETL:
+
+
+Pitching ETL:
 
 ---
 # Database
-
+Connected to postgres from ETL IPYNB. Pulled tables from postgres database to machine learning notebooks
 ---
 # Machine Learning Model
+Random Forest Classifier and Logistric Regression
 
 ---
 # Web App
 
 ---
 # Live Demo
+
+---
+# Technologies Used
+
+- Python and Pandas for data exploration and ETL
+- PostgreSQL for a database
+- Random Forest Classifier machine learning model
+- Matplotlib for visualization of findings
+- Heroku, Flask, HTML, and JavaScript for dashboard creation and deployment
