@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hall of Fame Machine Learning</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 jumbotron text-center">
-                <h1>Hall of Fame Players</h1>
-                <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">See What's New In Cooperstown</a></p>
-                <p>Use the interactive charts below to explore the dataset</p>
-            </div>
+    <div class="wrapper">
+        <div class="col-md-12 jumbotron text-center">
+            <h1>Hall of Fame Players</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">See What's New In Cooperstown</a>
+            </p>
+            <p>Use the interactive charts below to explore the dataset</p>
         </div>
         <div class="row" id="hall-news">
-            <div class="col-md-12">
+            <div class="col-md-9" id="interactive">
+
+            </div>
+            <div class="col-md-3">
                 <div class="media">
                     <div class="media-body">
                         <h2>Stay Up to Date With The HOF</h2>
@@ -30,14 +34,15 @@
                 </div>
             </div>
         </div>
-
         <div class="row" id="hall-featured-image">
-            <div class="col-md-8">
+            <div class="col-md-7">
+
+            </div>
+            <div class="col-md-5">
                 <h2>Newest from HOF Historical Image Gallery</h2>
                 <img src="{{hall.featured_image }}" class="img-responsive" alt="Responsive image" />
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-2">
                 <div class="well">
@@ -64,8 +69,97 @@
                 <div id="bubble"></div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="myCarousel" data-slide-to="1"></li>
+                        <li data-target="myCarousel" data-slide-to="2"></li>
+                        <li data-target="myCarousel" data-slide-to="3"></li>
+                        <li data-target="myCarousel" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="background-image:url(./static/images/baseballs.jpg);">
+                            <div class="overlay-image">
+                                <div class="container">
+                                    <h1>Image 1</h1>
+                                    <p>Baseball Graph Baseball Graph Baseball Graph</p>
+                                    <a href="#" class="btn btn-lg btn-primary">
+                                        Next Graph
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="background-image:url(static/images/cap1.jpg);">
+                            <div class="overlay-image">
+                                <div class="container">
+                                    <h1>Image 2</h1>
+                                    <p>Baseball Graph Baseball Graph Baseball Graph</p>
+                                    <a href="#" class="btn btn-lg btn-primary">
+                                        Next Graph
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="background-image:url(./static/images/cards.jpg);">
+                            <div class="overlay-image">
+                                <div class="container">
+                                    <h1>Image 3</h1>
+                                    <p>Baseball Graph Baseball Graph Baseball Graph</p>
+                                    <a href="#" class="btn btn-lg btn-primary">
+                                        Next Graph
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="background-image:url(./static/images/retro1.jpg);">
+                            <div class="overlay-image">
+                                <div class="container">
+                                    <h1>Image 4</h1>
+                                    <p>Baseball Graph Baseball Graph Baseball Graph</p>
+                                    <a href="#" class="btn btn-lg btn-primary">
+                                        Next Graph
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="background-image:url(./static/images/cards2.jpg);">
+                            <div class="overlay-image">
+                                <div class="container">
+                                    <h1>Image 5</h1>
+                                    <p>Baseball Graph Baseball Graph Baseball Graph</p>
+                                    <a href="#" class="btn btn-lg btn-primary">
+                                        Next Graph
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                        <span class="sr-only">Previous</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="static/js/script.js"></script>
