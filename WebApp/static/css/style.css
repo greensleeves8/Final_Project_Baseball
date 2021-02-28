@@ -6,6 +6,10 @@
     background-color: tan;
 }
 
+.jumbotron {
+    background: none;
+}
+
 .img-responsive {
     width: 100%;
     height: 100%;
