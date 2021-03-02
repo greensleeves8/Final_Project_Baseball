@@ -1,3 +1,5 @@
+bs4==0.0.1
+DateTime==4.3
 Django==3.1.7
 django-heroku==0.3.1
 click==7.1.2
@@ -11,4 +13,6 @@ MarkupSafe==1.1.1
 psycopg2==2.8.6
 pymongo==3.11.1
 selenium==3.141.0
+splinter==0.14.0
+webdriver-manager==3.3.0
 Werkzeug==1.0.1
