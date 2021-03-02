@@ -1,1 +1,1 @@
-mongo_api_key = "mongodb+srv://machine_sluggers:Vandy13@cluster0.edi3c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+mongo_api_key = "mongodb+srv://machine_sluggers:Vandy15@cluster0.pcmvf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
