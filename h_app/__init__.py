@@ -6,7 +6,7 @@ from config import mongo_api_key
 
 app_h = Flask(__name__)
 
-app_h.config["MONGO_URI"] = mongo_api_key
+app_h.config["MONGO_URI"] = "mongodb+srv://machine_sluggers:Vandy15@cluster0.pcmvf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongo = PyMongo(app_h)
 
 @app_h.route('/')
