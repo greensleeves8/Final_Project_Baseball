@@ -21,9 +21,6 @@ Once a candidate is deemed eligible, multiple criteria are taken into considerat
 Taking into consideration the process and requirements of being inducted into the Baseball Hall of Fame, a machine learning model will be developed and used to identify past Hall of Famers and predict future inductees.  In addition, this model will help recognize historically underrated players and examine the statistically-worthy players who have not yet been inducted to the Hall of Fame.  Ideally, the machine learning model will be able to be applied to future datasets and predict Hall of Fame inductees with an above average level of accuracy.
 
 # Table of Contents
-- [Machine Learning and the Hall of Fame](#machine-learning-and-the-hall-of-fame)
-  - [Introduction](#introduction)
-  - [Can Machine Learning be used to identify MLB Hall of Famers?](#can-machine-learning-be-used-to-identify-mlb-hall-of-famers)
 - [Table of Contents](#table-of-contents)
   - [Communication](#communication)
   - [Technologies](#technologies)
@@ -79,7 +76,12 @@ Pitching ETL:
 
 - Within the Career_Pitching_df our first focus was similar to before where we read in and merged our pitching and Hall of Fame CSV’s.  We cleaned up the data by removing players who would not qualify for the Hall of Fame based on their time played in the MLB. This allowed us to then focus on the stats that are important in determining what a Hall of Fame player should look like. Not every statistic we wanted was provided so we had to add several columns to our data frame.   Some of the stats we wanted to make sure we added were pitchers' Inning Pitched (IP), Win Percentage, Strikeout to Walk Ratio, and Walks Plus Hits Per Inning Pitched (WHIP).
 - We did run into an issue early on when creating the Career_Pitching_df.  We found that the CSV file did not have the correct pitcher ERA because the IPOuts column was not in its final form.  We had to add an IP column by dividing the IPOuts by three.
+
 ## Database
+
+Once ETL was finalized we worked on putting the four data frames created (career_batter_df, hall_batter_df, career_pitching_df, and hall_pitching_df) into a local host PostgreSQL database. We were able to create a connection by adding code into the Career_Batters and Career_Pitching IPYNB files. Steps taken to create this connection were to import create_engine from sqlalchemy, import the databse password from a config file, create a connection string and database engine, then to import each table. 
+
+Once our tables were created in Postgres, the next step was to pull the tables from Postgres to run through the machine learning model. We added this connection in the Batter and Pitcher RFC Model notebooks so we could pull the tables needed to run through the model. This was done by establishing a connection to the database with a cursor object, writing SQL statements to seelct the entirety of our tables, and saving them to a variable we could use moving forward. 
 
 ## Machine Learning Model
 
@@ -124,6 +126,7 @@ Once preprocessing the data was complete, the Random Forest Classifier and Logis
 | | | | | | | | *Actual Yes* | 22 | 12 |
 
 ## Visualizations
+Visualizations were created in Tableau to demonstrate how rare it is to be inducted to the Baseball Hall of Fame, and how it has become even more difficult to be competitove over time. A snapshot of these visualizations will be shown on the web app. 
 
 ## Deployment
 For User-Facing purposes - a combination of 
