@@ -6,7 +6,7 @@ import os
 
 app_h = Flask(__name__)
 
-app_h.config.from_object(os.environ['APP_SETTINGS'])
+app_h.config["MONGO_URI"] = os.environ['APP_SETTINGS']
 mongo = PyMongo(app_h)
 
 @app_h.route('/')
