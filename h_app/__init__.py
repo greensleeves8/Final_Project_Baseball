@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import hof_scraping
 import datetime as dt
-from config import mongo_api_key
+from config import APP_SETTINGS
 
 app_h = Flask(__name__)
 
