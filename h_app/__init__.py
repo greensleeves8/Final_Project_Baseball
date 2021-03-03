@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import hof_scraping
 import datetime as dt
+import os
 
 app_h = Flask(__name__)
 
