@@ -58,7 +58,7 @@ The following various technologies will be used throughout the completion of thi
 [Baseball-Reference.com: MLB Stats, Scores, History, and Records](https://www.baseball-reference.com/ "Baseball-Reference.com")
 
 
-[Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/ "Sean Lahman's Baseball Database")
+[Sean Lahman's Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/ "Sean Lahman's Baseball Database")
 
 
 [Baseball Hall](https://baseballhall.org/)
@@ -147,13 +147,22 @@ Heroku is a cloud-based service that has the functionality to connect to Github,
 Continuous code can be committed to the repository and then deployed within the Heroku platform by initially setting up the following files:
 * h_app: is the app folder created to contain the flask app and supporting templates
 	* __init__.py: the file that creates the flask app and additional routes
+	*static: this is a folder created to hold javascript and CSS
+		* CSS: a folder that contains the CSS functionality 
+			* style.css: contains the styling for the app
+		* JS: a folder that contains javascript files
+			* script.js: this file creates the drop down functionality of baseball players
 	* templates: the folder created within the app folder to organize html files
 		* base.html: creates the initial structure for our webpage
 		* index.html: an extension from our base.html and contains the main content
+		* background.html: the route created to contain all the background information required for understanding the purpose of the project 
+		* scrape.html: the route created to have all the scraping elements from the official Hall of Fame website
 * Procfile: this is file specifically used for Heroku to create the webserver and initialize the starting point
 * requirements.txt: this text file shows all the packages being used 
 * wsgi.py: this file imports our flask app
+* hof_scraping.py: contains all dependencies and functionality in order to pull the images from the baseball hall of fame website into our heroku app
 
 ## Credits
 
-“Homepage: Logo Image.” Baseball Hall of Fame, 23 Feb. 2021, baseballhall.org/. 
+“Homepage.” Baseball Hall of Fame, 23 Feb. 2021, baseballhall.org/. 
+This resource was used to obtain the Baseball Hall of Fame logo that is presented at the top of this document. 

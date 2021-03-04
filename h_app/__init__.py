@@ -9,14 +9,15 @@ app_h = Flask(__name__)
 app_h.config["MONGO_URI"] = os.environ['APP_SETTINGS']
 mongo = PyMongo(app_h)
 
+
 @app_h.route('/')
 def home():
     hall = mongo.db.hall.find_one()
     return render_template("index.html", hall=hall)
 
-@app_h.route('/Baseball')
+@app_h.route('/Background Knowledge')
 def Baseball():
-    return "<h1> Baseball Hall of Fame </h1>"
+    return render_template("background.html")
 
 # Create a scraping route 
 
@@ -26,7 +27,7 @@ def scrape():
     hall_data = hof_scraping.scrape_all()
     hall.update({}, hall_data, upsert=True)
 
-    return redirect('/', code=302)
+    return redirect('scrape.html', code=302)
 
 
 if __name__ == "__main__":
