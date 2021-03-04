@@ -63,6 +63,10 @@ The following various technologies will be used throughout the completion of thi
 
 [Baseball Hall](https://baseballhall.org/)
 
+
+[Fangraphs](https://www.fangraphs.com/)
+
+
 ## Data Exploration
 
 ## Extract, Transform, Load
@@ -126,7 +130,7 @@ Once preprocessing the data was complete, the Random Forest Classifier and Logis
 | | | | | | | | *Actual Yes* | 22 | 12 |
 
 ## Visualizations
-Visualizations were created in Tableau to demonstrate how rare it is to be inducted to the Baseball Hall of Fame, and how it has become even more difficult to be competitove over time. A snapshot of these visualizations will be shown on the web app. 
+Visualizations were created in Tableau to demonstrate how rare it is to be inducted to the Baseball Hall of Fame, and how it has become even more difficult to be competitive over time. A snapshot of these visualizations will be shown on the web app. 
 
 ## Deployment
 For User-Facing purposes - a combination of 
@@ -135,10 +139,8 @@ For User-Facing purposes - a combination of
 - Bootstrap 
 - JS 
 - Python
-- Flask 
-have been utilized to build a dynamic webpage that with current functionality to 
-- Scrape the top article from the Basball Hall of Fame's website
-- As well as pictures from the Hall's image gallery
+- Flask has been utilized to build a dynamic webpage that with current functionality to: 
+- Scrape the top article from the Basball Hall of Fame's website, as well as pictures from the Hall's image gallery
 - Create a dropdown list of Hall of Fame candidates throughout the history of baseball.
 - Additional functionality to be added shortly!
 
