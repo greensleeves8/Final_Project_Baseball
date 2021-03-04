@@ -166,5 +166,9 @@ Continuous code can be committed to the repository and then deployed within the 
 
 ## Credits
 
+This project would not have been possible without the use of [Sean Lahman's Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/), which is used here under the conditions of the
+[Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/). Any changes made to the original database have been described in this README. Further use of 
+this material is allowed under the same Creative Commons License.
+
 “Homepage.” Baseball Hall of Fame, 23 Feb. 2021, baseballhall.org/. 
 This resource was used to obtain the Baseball Hall of Fame logo that is presented at the top of this document. 
