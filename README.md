@@ -73,8 +73,21 @@ The following various technologies will be used throughout the completion of thi
 
 Batting ETL:
 
-- When creating our Career_Batting_df we started by reading in and merging the batting and Hall of Fame CSV’s. In order to clean up the data, we took out columns that had high null values. There were several key statistics that we needed to add such as Batting Average(AVG), On Base Percentage(OBP), and Slugging Percentage(SLG).
-- One of the issues we ran into on the Career_Batting_df was making our filter too narrow. We started by creating a filter of 2,000 at-bats(Ab) or higher and this ended up dropping our eligible player much lower than we wanted. We ended up filtering out any player who did not have an AB in the MLB since that helped eliminate pitchers and players with limited or no batting stats.
+- When creating our Career_Batting_df we started by reading in the Batting.csv and HallOfFame.csv from Sean Lahman's Baseball Database. 
+The HallOfFame dataframe was then filtered to only include members inducted as players, omitting executives/pioneers, managers, and umpires.
+In order to clean up the data, we took out columns that had high null values (CS, IBB, GIDP). Individual player seasons were then grouped together
+to create a dataframe of career batting statistics, and then the 'yearID' and 'stint' columns were dropped from the dataframe, and new columns were created to add several key statistics (Batting Average(AVG), On Base Percentage(OBP), and Slugging Percentage(SLG)). Further remaining null values
+in the dataframe were then replaced with zeroes. At this point the career batting dataframe and Hall of Fame dataframe were merged together
+to create a new dataframe of career statistics with Hall of Fame status included. This dataframe was then filtered to omit players who had never had an official MLB at-bat. Finally, 
+an additional level of filtering was added to omit pitchers inducted to the Hall of Fame from the batting database, as their inclusion would otherwise
+skew the results of the model (players with under 3000 career at-bats who had been inducted to the Hall of Fame were omitted, which removed 71 entries from the dataframe).
+At this point, our training dataframe was complete, containing 17,522 of the roughly 20,000 players to have appeared in Major League Baseball history, and all of
+the position players to be elected to the Hall of Fame. 
+- One of the issues we ran into on the Career_Batting_df was making our filter too narrow. We started by creating a filter of 2,000 at-bats(Ab) or higher and this ended up dropping our eligible player much lower than we wanted. 
+We ended up filtering out any player who did not have an AB in the MLB since that helped eliminate pitchers and players with limited or no batting stats. One final
+issue that arose in the process of creating our training dataframe was how to handle pitchers in the batting dataframe. National League pitchers and any pitcher to play before
+the advent of the Designated Hitter rule accumulated fairly large amounts of career at-bats, with near universally poor performance. Because any of the pitchers would show up
+as a Hall of Fame inductee in our dataframe, we decided to omit them from it, due to the likelihood that it would skew the machine learning model's performance. 
 
 Pitching ETL:
 
@@ -139,10 +152,10 @@ For User-Facing purposes - a combination of
 - Bootstrap 
 - JS 
 - Python
-- Flask has been utilized to build a dynamic webpage that with current functionality to: 
-- Scrape the top article from the Basball Hall of Fame's website, as well as pictures from the Hall's image gallery
-- Create a dropdown list of Hall of Fame candidates throughout the history of baseball.
-- Additional functionality to be added shortly!
+- Flask has been utilized to build a dynamic webpage with current functionality to: 
+	- Scrape the top article from the Basball Hall of Fame's website, as well as pictures from the Hall's image gallery
+	- Create a dropdown list of Hall of Fame candidates throughout the history of baseball.
+	- Additional functionality to be added shortly!
 
 ### Heroku 
 Heroku is a cloud-based service that has the functionality to connect to Github, which creates automatic deployment of our project.  
