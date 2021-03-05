@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hall of Fame Machine Learning</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <nav>
+        <div class= "logo"><a href="#"><img src="logo.png" style="float: left"></a>
+            <h4>Machine Learning Sluggers</h4>
+        </div>
+        <iframe src="https://en.wikipedia.org/wiki/Major_League_Baseball_logo#/media/File:Major_League_Baseball_logo.svg" alt="Major League Baseball" style="display: none;">
+        </iframe>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Pitching.html">Pitching</a></li>
+            <li><a href="https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Career_Batters.ipynb">Batting</a></li>
+            <li><a href="Prediction.html">Prediction</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>Hall of Fame Players</h1>
+                <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">See What's New In Cooperstown</a></p>
+                <p>Use the interactive charts below to explore the dataset</p>
+            </div>
+        </div>
+        <div class="row" id="hall-news">
+            <div class="col-md-12">
+                <div class="media">
+                    <div class="media-body">
+                        <h2>Stay Up to Date With The HOF</h2>
+                        <img src="{{hall.news_image}}" class="img-responsive" alt="Responsive image" />
+                        <h4 class="media-heading">{{hall.news_title}}</h4>
+                        <p>{{ hall.news_paragraph }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="hall-featured-image">
+            <div class="col-md-8">
+                <h2>Newest from HOF Historical Image Gallery</h2>
+                <img src="{{hall.featured_image }}" class="img-responsive" alt="Responsive image" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="well">
+                    <h5>Test Subject ID No.:</h5>
+                    <!-- <select id="selDataset"></select> -->
+                    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Demographic Info</h3>
+                    </div>
+                    <div id="sample-metadata" class="panel-body"></div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="bar"></div>
+            </div>
+            <div class="col-md-5">
+                <div id="gauge"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/js/script.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
