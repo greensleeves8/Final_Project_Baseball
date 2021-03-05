@@ -1,3 +1,22 @@
 body {
-  background-color: #fefbd8;
+  background-color: #181be2;
 }
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid rgb(212, 10, 10);
+  background-color: #059c19;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
