@@ -1,22 +1,132 @@
 body {
-  background-color: #181be2;
+  background-color: #B8860B;
 }
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid rgb(212, 10, 10);
-  background-color: #059c19;
+  
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: order-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif'
 }
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(167, 48, 48);
+  margin: 0 auto;
+  padding: 0 auto; 
+  position: sticky;
+  top: 0;
 }
 
+.navbar {
+  background: #131313;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 auto; 
+}
+
+
+#navbar__logo {
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+}
+
+
+.logo img{
+  position: absolute;
+  margin-top: 0px;
+  margin-left: -10px;
+}
+
+.logo{
+  color: floralwhite;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.nav ul{
+  text-align: center;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li{
+  list-style: none;
+
+}
+.nav-links{
+  color: floralwhite;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+@media screen and (max-width:1024px){
+  .nav-links{
+      width: 60%;
+  }
+}
+@media screen and (max-width:768px){
+  body{
+      overflow-x: hidden;
+  }
+  .nav-links{
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color:gainsboro;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translate(100%);
+      transition: transform 0.5s ease-in;
+ }
+ .nav-links li{
+     opacity: 0;
+ }
+ 
+.nav-active{
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+
+}
