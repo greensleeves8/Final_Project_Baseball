@@ -20,6 +20,17 @@ Once a candidate is deemed eligible, multiple criteria are taken into considerat
 
 Taking into consideration the process and requirements of being inducted into the Baseball Hall of Fame, a machine learning model will be developed and used to identify past Hall of Famers and predict future inductees.  In addition, this model will help recognize historically underrated players and examine the statistically-worthy players who have not yet been inducted to the Hall of Fame.  Ideally, the machine learning model will be able to be applied to future datasets and predict Hall of Fame inductees with an above average level of accuracy.
 
+## Our Product
+
+Membership in the National Baseball Hall of Fame is considered one of the highest honors in all of sports. Of the roughly 20,000 players in history to appear in a Major League game, 
+only 263 have been elected to the Hall as players (1.3%). In fact, gaining entrance to the hall seems to become more difficult over time. After the 1970 season, 1.9% of players in history
+had gained entrance to the hall, meaning that under 1% of players since that point have been elected. The task of electing players to the hall has become more and more difficult over time
+as baseball writers and veterans' committee members have to weigh the effects of changes in the style of play, fallout from the Steroids era, and intangible qualities such as a player's sportsmanship, 
+character, and integrity. What our Hall of Fame Predictor does is create a tool for fans to evaluate players' Hall of Fame case based solely on their on-field production, with a high degree
+of accuracy. Our predictions are based on a database built of nearly every player in baseball history, allowing for players to be compared across eras and varying styles of play. Who's most likely 
+to be elected next year? Who had the better Hall of Fame resume, Babe Ruth or Hank Aaron? Which non-members have the most compelling statistical case for inclusion? All of these can be 
+answered with our Hall of Fame Predictor.
+
 # Table of Contents
 - [Table of Contents](#table-of-contents)
   - [Communication](#communication)
