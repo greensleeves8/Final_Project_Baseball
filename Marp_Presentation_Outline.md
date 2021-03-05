@@ -16,22 +16,26 @@ section {
 </style>
 
 ## Overview 
-- Proposal 
+- Proposal
+- Process 
+  - ETL
+  - Database
+  - Machine Learning Model
+  - Visualizations
+  - Deployment & Heroku
+- Web App - Live Demo
+- Pitch & Selling Points
 - Technologies Used
-- ETL
-- Database
-- Machine Learning Model
-- Web App
-- Live Demo
+- Resources
 
 
 ---
 # Proposal 
 ## Using machine learning to predict future members to the Baseball Hall of Fame
 
-- predict future inductees
-- examine the statistically-worthy players who have not yet been inducted
-- recognize historically underrated players
+- Predict future inductees
+- Examine the statistically-worthy players who have not yet been inducted
+- Recognize historically underrated players
 
 ---
 # Technologies Used
@@ -45,21 +49,45 @@ section {
 
 ---
 # ETL
-Batting ETL:
-
-
-Pitching ETL:
+## Batting ETL:
+Created Career_Batting_df by:
+- Merging Batting and Hall of Fame CSV's
+- Dropping columns with too many null values
+- Adding some necessary calculated statistics 
+## Pitching ETL:
+Created Career_Pitching_df by:
+- Merging the pitching and Hall of Fame CSV's
+- Dropping players who did not meet the minimum time to be eligible for the HOF
+- Additional necessary calculated columns were added 
 
 ---
 # Database
-Connected to postgres from ETL IPYNB. Pulled tables from postgres database to machine learning notebooks
+- Create connection to database from ETL documents
+- Import 4 tables to PostgreSQL
+- Pull tables from Postgres to machine learning documents with cursor object
 
 ---
 # Machine Learning Model
-Random Forest Classifier and Logistric Regression
+- Targeted high precision scores 
+  - If predicted in HOF, how likely is it true
+- High recall
+  - Finding eligible players from so many ineligible
+- Random Forest Classifier: 96.7% Accuracy, 0.71 precision, 0.59 recall
+- Logistic Regression: 99.4% Accuracy, 0.59 precision, 0.56 recall 
 
 ---
+# Deployment and Heroku
+- Used HTML, CSS, Boostrap, JS, Python, and Fask to build dynamic webpage
+- Ability to scrape HOF website top article and pictures
+- Set up file system according to Heroku's speicifcations to deploy our project
+  - h_app, html files, Procfile, requirements, wsgi
 
+---
+# Pitch & Selling Points
+- Sell to baseball teams for drafting players or Hall of Fame electors 
+- Takes bias out of the process
+- Easy to update and run year after year
+---
 # Live Demo
 
 https://hall-of-fame-baseball.herokuapp.com/
