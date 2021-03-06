@@ -7,6 +7,7 @@ import os
 app_h = Flask(__name__)
 
 
+
 app_h.config["MONGO_URI"] = os.environ['APP_SETTINGS']
 print(app_h.config["MONGO_URI"])
 try: 
