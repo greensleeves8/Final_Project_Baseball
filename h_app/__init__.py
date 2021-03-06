@@ -8,7 +8,7 @@ app_h = Flask(__name__)
 
 
 app_h.config["MONGO_URI"] = os.environ['APP_SETTINGS']
-#print(app_h.config["MONGO_URI"])
+print(app_h.config["MONGO_URI"])
 try: 
     mongo = PyMongo(app_h)
 except: 
@@ -18,7 +18,6 @@ except:
 
 @app_h.route('/')
 def home():
-    hall = mongo.db.hall.find_one()
     return render_template("index.html")
 
 
@@ -45,11 +44,12 @@ def Prediction():
 
 @app_h.route("/scrape")
 def scrape():
-    hall = mongo.db.hall
+    hall_db = mongo.db.hall
     hall_data = hof_scraping.scrape_all()
-    hall.update({}, hall_data, upsert=True)
-
-    return render_template("scrape.html")
+    hall_db.update({}, hall_data, upsert=True)
+    hall = hall_db.find()
+    
+    return render_template("scrape.html", hall=hall)
 
 
 if __name__ == "__main__":
