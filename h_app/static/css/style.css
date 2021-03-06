@@ -1,5 +1,5 @@
 body {
-  background-color: #B8860B;
+  background-color: #B0E0E6;
 }
 
   
@@ -16,7 +16,7 @@ nav{
   align-items: center;
   height: 80px;
   font-family: 'Roboto', sans-serif;
-  background-color: rgb(167, 48, 48);
+  background-color: #FDF5E6;
   margin: 0 auto;
   padding: 0 auto; 
   position: sticky;

@@ -19,7 +19,7 @@ except:
 @app_h.route('/')
 def home():
     hall = mongo.db.hall.find_one()
-    return render_template("index.html", hall=hall)
+    return render_template("index.html")
 
 
 @app_h.route('/Background')
@@ -49,7 +49,7 @@ def scrape():
     hall_data = hof_scraping.scrape_all()
     hall.update({}, hall_data, upsert=True)
 
-    #return render_template("scrape.html")
+    return render_template("scrape.html")
 
 
 if __name__ == "__main__":
