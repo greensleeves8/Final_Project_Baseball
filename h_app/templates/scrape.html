@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-  <link href="static/css/scrape.css" rel="stylesheet">
-  </link>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <link href="static/css/scrape.css" rel="stylesheet"></link>
+   <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -23,71 +24,53 @@
             <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/base">Homepage</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger"
-              href="https://hall-of-fame-baseball.herokuapp.com/Background">Background Knowledge</a>
+            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Background">Background Knowledge</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/scrape">HOF
-              Updates</a>
+            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/scrape">HOF Updates</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Batting">Batting</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger"
-              href="https://hall-of-fame-baseball.herokuapp.com/Pitching">Pitching</a>
+            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Pitching">Pitching</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger"
-              href="https://hall-of-fame-baseball.herokuapp.com/Prediction">Prediction</a>
+            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Prediction">Prediction</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <title>Stay Up to Date with the Latest from the Hall of Fame</title>
+    <title>Stay Up to Date with the Latest from the Hall of Fame</title>
 </head>
-
 <body>
 
-  <div class="container">
-    <div class="row">
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">See What's New In Cooperstown</a></p>
-    </div>
+    <div class="container">
+        <div class="row">
+                <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">See What's New In Cooperstown</a></p>
+        </div>
     <div class="row" id="hall-featured-image">
-      <div class="col-md-8">
-        <h2>Newest from HOF Historical Image Gallery</h2>
-        <img src="{{hall.featured_image }}" class="img-responsive" alt="Responsive image" />
-      </div>
+        <div class="col-md-8">
+            <h2>Newest from HOF Historical Image Gallery</h2>
+            <img src="{{hall.featured_image }}" class="img-responsive" alt="Responsive image" />
+        </div>
     </div>
 
     <h2>{{hall.news_title}}</h2>
 
     <div class="row" id="hall-news">
-      <div class="col-md-12">
-        <div class="media">
-          <div class="media-body">
-            <h2>Stay Up to Date With The HOF</h2>
-            <img src="{{hall.news_image}}" class="img-responsive" alt="Responsive image" />
-            <h4 class="media-heading">{{hall.news_title}}</h4>
-            <p>{{ hall.news_paragraph }}</p>
-          </div>
+        <div class="col-md-12">
+            <div class="media">
+                <div class="media-body">
+                    <h2>Stay Up to Date With The HOF</h2>
+                    <img src="{{hall.news_image}}"  class="img-responsive" alt="Responsive image" />
+                    <h4 class="media-heading">{{hall.news_title}}</h4>
+                    <p>{{ hall.news_paragraph }}</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-
-    <!-- Bootstrap JS scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-
+    
 </body>
-
 </html>
