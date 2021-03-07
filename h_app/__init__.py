@@ -42,7 +42,7 @@ def Prediction():
 
 # Create a scraping route 
 
-@app_h.route("/Scrape")
+@app_h.route("/scrape")
 def scrape():
     hall_db = mongo.db.hall
     hall_data = hof_scraping.scrape_all()
