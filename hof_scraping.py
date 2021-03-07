@@ -1,15 +1,23 @@
 # Import dependencies
 from splinter import Browser
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup as soup
 import datetime as dt
 import os
 
+GOOGLE_CHROME_BIN = "heroku:/app/.apt/usr/bin/google-chrome"
+CHROMEDRIVER_PATH = "C:/Users/16504/.wdm/drivers/chromedriver/win32/88.0.4324.96/chromedriver.exe"
+
+chrome_options = Options()
+chrome_options.binary_location = GOOGLE_CHROME_BIN
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
 
 def scrape_all():
     # Initiate headless driver for deployment
-    browser = Browser("chrome", executable_path=ChromeDriverManager().install(), headless=True)
+    browser = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+    browser = Browser("chrome", executable_path=CHROMEDRIVER_PATH, headless=True)
     news_title, news_post = hallNews(browser)
 
     # Run all scraping functions and store results in dictionary
@@ -98,7 +106,7 @@ def featured_image(browser):
 
     except AttributeError:
         return None
-
+    img_url = f"https://collection.baseballhall.org/{img_url}"
     return img_url
 
 
