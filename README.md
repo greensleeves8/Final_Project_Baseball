@@ -102,7 +102,12 @@ as a Hall of Fame inductee in our dataframe, we decided to omit them from it, du
 
 Pitching ETL:
 
-- Within the Career_Pitching_df our first focus was similar to before where we read in and merged our pitching and Hall of Fame CSV’s.  We cleaned up the data by removing players who would not qualify for the Hall of Fame based on their time played in the MLB. This allowed us to then focus on the stats that are important in determining what a Hall of Fame player should look like. Not every statistic we wanted was provided so we had to add several columns to our data frame.   Some of the stats we wanted to make sure we added were pitchers' Inning Pitched (IP), Win Percentage, Strikeout to Walk Ratio, and Walks Plus Hits Per Inning Pitched (WHIP).
+- Within the Career_Pitching_df, our first focus was similar to the process with the batter ETL, this time reading in the Pitching.csv and HallOfFame.csv from Sean Lahman's Baseball Database. 
+The Hall of Fame dataframe was then filtered to only include individuals voted on as players. Statistics with high rates of null values were then dropped from the pitching statistic dataframe
+(SH, SF, IBB, GIDP, plus the 'yearID' and 'stint' columns). Career statistics were then accumulated, and new statistical columns were added for Win Percentage, Strikeout/Walk Ratio, Walks and
+Hits per Inning Pitched, and Earned Run Average. Existing null values were then replaced with zeroes, and then the career pitching and Hall of Fame status dataframes were merged to create a 
+dataframe of career statistics and Hall of Fame status. Finally the dataframe was filtered to omit players who had never recorded a strike out or had an infinite Strikeout/Walk ratio due to
+small sample size, and columns were dropped due to collinearity or redundancy. 
 - We did run into an issue early on when creating the Career_Pitching_df.  We found that the CSV file did not have the correct pitcher ERA because the IPOuts column was not in its final form.  We had to add an IP column by dividing the IPOuts by three.
 
 ## Database
