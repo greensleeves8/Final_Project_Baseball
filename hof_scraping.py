@@ -7,8 +7,9 @@ from bs4 import BeautifulSoup as soup
 import datetime as dt
 import os
 
-# GOOGLE_CHROME_BIN = "/app/.apt/usr/bin/"
-# CHROMEDRIVER_PATH = "/app/.chromedriver/bin/chromedriver"
+GOOGLE_CHROME_BIN = os.environ['GOOGLE_CHROME_BIN']
+CHROMEDRIVER_PATH = os.environ['CHROMEDRIVER_PATH']
+
 chrome_options = Options()
 chrome_options.binary_location = GOOGLE_CHROME_BIN
 chrome_options.add_argument('--disable-gpu')
