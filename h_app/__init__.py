@@ -44,12 +44,12 @@ def Prediction():
 
 @app_h.route("/scrape")
 def scrape():
-    hall_db = mongo.db.hall
-    hall_data = hof_scraping.scrape_all()
-    hall_db.update({}, hall_data, upsert=True)
-    hall = hall_db.find()
+    # hall_db = mongo.db.hall
+    # hall_data = hof_scraping.scrape_all()
+    # hall_db.update({}, hall_data, upsert=True)
+    # hall = hall_db.find()
     
-    return render_template("scrape.html", hall=hall)
+    return render_template("scrape.html")
 
 
 if __name__ == "__main__":
