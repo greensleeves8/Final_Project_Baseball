@@ -7,11 +7,13 @@ from bs4 import BeautifulSoup as soup
 import datetime as dt
 import os
 
-GOOGLE_CHROME_BIN = "heroku:/app/.apt/usr/bin/google-chrome"
-CHROMEDRIVER_PATH = "C:/Users/16504/.wdm/drivers/chromedriver/win32/88.0.4324.96/chromedriver.exe"
+GOOGLE_CHROME_BIN = "/app/.apt/usr/bin/google-chrome.exe"
+CHROMEDRIVER_PATH = "/app/.chromedriver/bin/chromedriver.exe"
 
 chrome_options = Options()
 chrome_options.binary_location = GOOGLE_CHROME_BIN
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
 
 def scrape_all():
