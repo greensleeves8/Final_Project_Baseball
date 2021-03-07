@@ -157,16 +157,25 @@ Once preprocessing the data was complete, the Random Forest Classifier and Logis
 Visualizations were created in Tableau to demonstrate how rare it is to be inducted to the Baseball Hall of Fame, and how it has become even more difficult to be competitive over time. A snapshot of these visualizations will be shown on the web app. 
 
 ## Deployment
-For User-Facing purposes - a combination of 
+For User-Facing purposes - technologies implemented were a combination of
+
 - HTML 
 - CSS 
-- Bootstrap 
+- Bootstrap
 - JS 
-- Python
-- Flask has been utilized to build a dynamic webpage with current functionality to: 
-	- Scrape the top article from the Basball Hall of Fame's website, as well as pictures from the Hall's image gallery
-	- Create a dropdown list of Hall of Fame candidates throughout the history of baseball.
-	- Additional functionality to be added shortly!
+- Python/Flask 
+
+* HTML was used to structure and design our webpages 
+	* 7 html files were created to host 6 different user experiences: 
+		- Home Page
+		- Project Background
+		- Index of batting-categorized players pertaining to the project's player datasets
+		- Index of pitching-categorized players pertaining to the project's player datasets
+		- Scraping page which allows user-exploration of the Hall of Fame website
+		- Machine Learning prediction page which showcases the model's results to user
+* Bootstrap 4/CSS/JS allowed easy setup of NavBar functionality, a self-rotating image carousel, and many other design and formatting options.
+* Python was used to implement a web-scraping script that allows us to pull current facets of the Baseball Hall of Fame's website such as their latest news article, and most recent historical image from their gallery page.
+* Flask was used to to set up multiple routes for different web application functionalities.
 
 ### Heroku 
 Heroku is a cloud-based service that has the functionality to connect to Github, which creates automatic deployment of our project.  
