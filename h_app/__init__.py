@@ -35,21 +35,21 @@ def Pitching():
     return render_template("pitching.html")
 
 
-@app_h.route('/Prediction')
+@app_h.route('/Analysis')
 def Prediction():
-    return render_template("prediction.html")
+    return render_template("analysis.html")
 
 
 # Create a scraping route 
 
-@app_h.route("/scrape")
+@app_h.route("/Visualizations")
 def scrape():
     # hall_db = mongo.db.hall
     # hall_data = hof_scraping.scrape_all()
     # hall_db.update({}, hall_data, upsert=True)
     # hall = hall_db.find()
     
-    return render_template("scrape.html")
+    return render_template("visualizations.html")
 
 
 if __name__ == "__main__":

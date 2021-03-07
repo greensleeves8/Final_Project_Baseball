@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<!--Title-->
-<h1><center>Predicting the Baseball Hall of Fame</center></h1>
                 
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -14,14 +11,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/base">Homepage</a>
-          </li> -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com">Homepage</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Background">Background Knowledge</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/scrape">HOF Updates</a>
+            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Visualizations">Visualizations</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Batting">Batting</a>
@@ -30,12 +27,15 @@
             <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Pitching">Pitching</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Prediction">Prediction</a>
+            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Analysis">Analysis</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!--Title-->
+<h1><center>Predicting the Baseball Hall of Fame</center></h1>
 
 <h2>Can Machine Learning be used to identify MLB Hall of Famers?</h2>
 <p>Taking into consideration the process and requirements of being inducted into the Baseball Hall of Fame, a machine learning model will be developed and used to identify past Hall of Famers and predict future inductees. In addition, this model will help recognize historically underrated players and examine the statistically-worthy players who have not yet been inducted to the Hall of Fame. Ideally, the machine learning model will be able to be applied to future datasets and predict Hall of Fame inductees with an above average level of accuracy.</p>
@@ -46,13 +46,92 @@
 <p>Membership in the National Baseball Hall of Fame is considered one of the highest honors in all of sports. Of the roughly 20,000 players in history to appear in a Major League game, only 263 have been elected to the Hall as players (1.3%). In fact, gaining entrance to the hall seems to become more difficult over time. After the 1970 season, 1.9% of players in history had gained entrance to the hall, meaning that under 1% of players since that point have been elected. The task of electing players to the hall has become more and more difficult over time as baseball writers and veterans' committee members have to weigh the effects of changes in the style of play, fallout from the Steroids era, and intangible qualities such as a player's sportsmanship, character, and integrity. What our Hall of Fame Predictor does is create a tool for fans to evaluate players' Hall of Fame case based solely on their on-field production, with a high degree of accuracy. Our predictions are based on a database built of nearly every player in baseball history, allowing for players to be compared across eras and varying styles of play. Who's most likely to be elected next year? Who had the better Hall of Fame resume, Babe Ruth or Hank Aaron? Which non-members have the most compelling statistical case for inclusion? All of these can be answered with our Hall of Fame Predictor.</p>
 
 
+<!-- Carousel start -->
+<div class="row">
+  <div class="col-md-12">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="myCarousel" data-slide-to="1"></li>
+              <li data-target="myCarousel" data-slide-to="2"></li>
+              <li data-target="myCarousel" data-slide-to="3"></li>
+              <li data-target="myCarousel" data-slide-to="4"></li>
+          </ol>
+              <div class="carousel-inner">
+                  <img class="d-block w-100" src="static/Images/cap1.jpg" alt="slide2">
+                  <div class="carousel-caption">
+                      <!-- <h1>Image 2</h1>
+                      <p>Baseball Graph Baseball Graph Baseball Graph</p> -->
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="static/Images/cards.jpg" alt="slide3">
+                  <div class="carousel-caption">
+                      <!-- <h1>Image 3</h1> -->
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="static/Images/retro1.jpg" alt="slide4">
+                  <div class="carousel-caption">
+                      <!-- <h1>Image 4</h1> -->
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="static/Images/cards2.jpg" alt="slide5">
+                  <div class="carousel-caption">
+                      <!-- <h1>Image 5</h1> -->
+                  </div>
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+      </div>
+  </div>
+</div>
+</div>
+<!-- Carousel End -->
+
 <div class="row">
     <div class="col-md-2">
         <div class="well">
-            <h5>Dropdown</h5>
+            <h5>List of PlayerID Names</h5>
             <!-- <select id="selDataset"></select> -->
             <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
+
+
+
+<!-- Carousel Script Imports -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+crossorigin="anonymous"></script>
+<!-- Carousel Script End -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="static/js/script.js"></script>
+<script src="static/css/style.css"></script>
        
 
 {% endblock %}
