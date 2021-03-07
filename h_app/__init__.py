@@ -6,6 +6,15 @@ import os
 
 app_h = Flask(__name__)
 
+<<<<<<< HEAD
+app_h.config["MONGO_URI"] = os.environ['APP_SETTINGS']
+print(app_h.config["MONGO_URI"])
+try: 
+    mongo = PyMongo(app_h)
+except: 
+    print("Did not run")
+    print(app_h.config["MONGO_URI"])
+=======
 
 #app_h.config["MONGO_URI"] = os.environ['APP_SETTINGS']
 mongo = PyMongo(app_h, uri="mongodb+srv://machine_sluggers:Vandy15@cluster0.pcmvf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
@@ -15,6 +24,7 @@ mongo = PyMongo(app_h, uri="mongodb+srv://machine_sluggers:Vandy15@cluster0.pcmv
 # except: 
 #     print("Did not run")
 #     print(app_h.config["MONGO_URI"])
+>>>>>>> main
 
 
 @app_h.route('/')
@@ -40,6 +50,7 @@ def Pitching():
 @app_h.route('/Prediction')
 def Prediction():
     return render_template("prediction.html")
+
 
 # Create a scraping route 
 
