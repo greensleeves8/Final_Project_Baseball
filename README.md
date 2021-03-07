@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="Images/nb_logo.png">
+  <img src="h_app/static/Images/nb_logo.png">
 </p>
  <p align="center"> Machine Learning and the Baseball Hall of Fame </p>
 
