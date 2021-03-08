@@ -1,0 +1,13 @@
+body {
+    background-color: #B0E0E6;
+  }
+
+  img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }
