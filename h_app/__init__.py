@@ -43,7 +43,7 @@ def Prediction():
 # Create a scraping route 
 
 @app_h.route("/Visualizations")
-def scrape():
+def visualizations():
     # hall_db = mongo.db.hall
     # hall_data = hof_scraping.scrape_all()
     # hall_db.update({}, hall_data, upsert=True)
