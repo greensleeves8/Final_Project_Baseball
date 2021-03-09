@@ -14,7 +14,6 @@
 <body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,9 +27,6 @@
             <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Background">Background Knowledge</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Visualizations">Visualizations</a>
-            </li>
-            <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Batting">Batting</a>
             </li>
             <li class="nav-item">
@@ -39,53 +35,45 @@
             <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Analysis">Analysis</a>
             </li>
+            <li class="nav-item">
+                <img src="static/Images/mlSluggers.png" width="58.5" height="50" />
+                </li>
         </ul>
         </div>
     </div>
     </nav>
 
     <h3>Analysis Images</h3>
-    <p>Below are the images that were created by our machine learning analysis.</p>
+    <p>-</p>
 
 
     
 
 <div class="polaroid">
-    <p style="text-align:center;"><img
-    src="static/Images/final/HOF_Circle.png"></p>
+    <p style="text-align:center;">
+        <img id="img" src="static/Images/final/HOF_inducted_Bar.png"></a>
+    </p>
+    <div id="popup" class="pop">
+        <span class="close">&times;</span>
+        <img class="content" id="img1">
+        <div id="caption"></div>
+        <p></p>
+</div>
+
+<div class="polaroid">
+    <p style="text-align:center;">
+        <a class="img-link" href="https://hall-of-fame-baseball.herokuapp.com/Analysis/Players_vs_HOF_status.png"
+        ><img src="static/Images/final/Players_vs_HOF_status.png"></a>
+    </p>
     <div class="container">
         <p></p>
     </div>  
 </div>
 
-<div class="polaroid">
-    <p style="text-align:center;"><img
-    src="static/Images/final/HOF_inducted_Bar.png"></p>
-    <div class="container">
-        <p></p>
-    </div>  
-</div>
-
-<div class="polaroid">
-    <p style="text-align:center;"><img
-    src="static/Images/final/image.png"></p>
-    <div class="container">
-        <p></p>
-    </div>  
-</div>
-
-<div class="polaroid">
-    <p style="text-align:center;"><img
-    src="static/Images/final/Players_vs_HOF_status.png"></p>
-    <div class="container">
-        <p></p>
-    </div>  
-</div>
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-    <script src="static/js/pitcher_data.js"></script>
-    <script src="static/js/pitcher.js"></script>   
+    <script src="static/js/analysis.js"></script>  
 
      <!-- Bootstrap JS scripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

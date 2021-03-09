@@ -185,6 +185,7 @@ For User-Facing purposes - technologies implemented were a combination of
 
 ### Heroku 
 Heroku is a cloud-based service that has the functionality to connect to Github, which creates automatic deployment of our project.  
+[Hall of Fame Baseball App](https://hall-of-fame-baseball.herokuapp.com/)
 Continuous code can be committed to the repository and then deployed within the Heroku platform by initially setting up the following files:
 * h_app: is the app folder created to contain the flask app and supporting templates
 	* __init__.py: the file that creates the flask app and additional routes
