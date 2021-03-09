@@ -34,9 +34,6 @@
               <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Background">Background Knowledge</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Visualizations">Visualizations</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Batting">Batting</a>
             </li>
             <li class="nav-item">
@@ -45,6 +42,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Analysis">Analysis</a>
             </li>
+            <li class="nav-item">
+              <img src="static/Images/mlSluggers.png" width="58.5" height="50" />
+              </li>
         </ul>
       </div>
     </div>
@@ -59,23 +59,23 @@
             <div class = "row">
                 <div class = "col-md-3">
                     <div class="filters">
-                        <form>
-                            <p>Filter Search: Batting Data</p>
+                      <form>
+                            <p><b>Filter Search: Batting Data</b></p>
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <label for="First Name">Enter First Name</label>
+                                    <label for="First Name"><b>Enter First Name</b></label>
                                     <input type="text" id="First Name" class="form-control" placeholder="Jackie"  />
                                 </li>
                                 <li class="list-group-item">
-                                    <label for="Last Name">Enter Last Name</label>
+                                    <label for="Last Name"><b>Enter Last Name</b></label>
                                     <input type="text" id="Last Name" class="form-control" placeholder="Robinson" />
                                 </li>
                                 <li class="list-group-item">
-                                    <label for="Inducted">Inducted Status</label>
+                                    <label for="Inducted"><b>Inducted Status</b></label>
                                     <input type="text" id="Inducted" class="form-control" placeholder="Y or N" />
                                 </li>
                                 <li class="list-group-item">
-                                    <label for="HOF Prediction">HOF Prediction</label>
+                                    <label for="HOF Prediction"><b>HOF Prediction</b></label>
                                     <input type="text" id="HOF Prediction" class="form-control" placeholder="Y or N" />
                                 </li>
                             </ul>
@@ -85,6 +85,7 @@
 
                 <div class = "col-md-9">
                     <table class="table table-striped">
+                      <table border="10">
                         <thead>
                             <tr>
                                 <th>First Name</th>

@@ -4,3 +4,13 @@ body {
 table, th, td {
     border: 1px solid black;
 }  
+
+ul.list-group {
+  background-color: #b0e0e6;
+  border: 1px solid black;
+}
+
+li.list-group-item {
+  background-color: #b0e0e6;
+  border: 1px solid black;
+}
