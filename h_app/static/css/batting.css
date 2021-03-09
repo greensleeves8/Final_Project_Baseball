@@ -8,9 +8,15 @@ table, th, td {
 ul.list-group {
   background-color: #b0e0e6;
   border: 1px solid black;
+  justify-content: center;
+  display: flex;
 }
 
 li.list-group-item {
   background-color: #b0e0e6;
   border: 1px solid black;
+  justify-content: center;
+  display: flex;
 }
+
+
