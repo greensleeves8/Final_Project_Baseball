@@ -14,6 +14,14 @@ Cale Green, Camille Goodwin, Claire Davis, Matt Martin, Silas Cobb, Trey Wehrmey
 section {
   background: #B0C4DE;
 }
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+img[alt~="right"] {
+  display: block;
+  margin: 200;
+}
 </style>
 
 # Overview 
@@ -43,6 +51,8 @@ section {
 
 *[Baseball Hall](https://baseballhall.org/)*
 
+*[Fangraphs](https://www.fangraphs.com/)*
+
 Tables Used:
 - Pitching.csv
 - Batting.csv
@@ -70,13 +80,23 @@ Created Career_Batting_df by:
 Created Career_Pitching_df by:
 - Merging the pitching and Hall of Fame CSV's
 - Dropping players who did not meet the minimum time to be eligible for the HOF
-- Additional necessary calculated columns were added 
+- Additional necessary calculated columns were added
+
+
+---
+### Final Hall Batter Dataframe in Jupyter Notebook
+![](Images/ETL_Image.JPG)
 
 ---
 # Database
 - Create connection to database from ETL documents
 - Import 4 tables to PostgreSQL
 - Pull tables from Postgres to machine learning documents with cursor object
+
+---
+### Entity Relationship Diagram
+ ![center](Images/ERD.JPG)
+
 
 ---
 # Live Demo
@@ -92,6 +112,9 @@ https://hall-of-fame-baseball.herokuapp.com/
 - Random Forest Classifier: 99.2% Accuracy, 0.63 precision, 0.44 recall
 - Logistic Regression: 99.4% Accuracy, 0.59 precision, 0.56 recall 
 - XGBoost with SMOTE: 98.9% Accuracy, 0.46 precision, 0.77 recall
+
+---
+<!-- decision tree images -->
 
 ---
 # Deployment and Heroku
