@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"/>
+    <link href="static/css/analysis.css" rel="stylesheet"></link>
+</head>
+<body>
+<!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Background">Background Knowledge</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Batting">Batting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Pitching">Pitching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://hall-of-fame-baseball.herokuapp.com/Analysis">Analysis</a>
+                </li>
+                <li class="nav-item">
+                    <img src="static/Images/mlSluggers.png" width="58.5" height="50" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="polaroid">
+        <p style="text-align:center;">
+            <img id="img" src="static/Images/final/HOF_inducted_Bar.png"></a>
+        </p>
+        <div id="popup" class="pop">
+            <span class="close">&times;</span>
+            <img class="content" id="img1">
+            <div id="caption"></div>
+            <p>This bar chart visualization shows total number of players inducted to the HOF in
+                baseball history, total number of players nominated but not inducted to the HOF, and lastly (also by far
+                most commonly) all other players. This visualization helps to clarify and separate the nominees who did and
+                did not get in to the HOF.</p>
+    </div>
+
+    <div class="polaroid">
+        <p style="text-align:center;">
+            <img id="img" src="static/Images/final/Players_vs_HOF_status.png"></a>
+        </p>
+        <div id="popup" class="pop">
+            <span class="close">&times;</span>
+            <img class="content" id="img1">
+            <div id="caption"></div>
+            <p>This chart illustrates the increasing rarity of which players get inducted into the HOF. As the total number
+                of players has steadily increased over the past 150 years - the number of inducted players has risen at a
+                much slower scale.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="myCarousel" data-slide-to="1"></li>
+                    <li data-target="myCarousel" data-slide-to="2"></li>
+                    <li data-target="myCarousel" data-slide-to="3"></li>
+                    <li data-target="myCarousel" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class = "carousel-item active" id="slide">
+                        <img class="d-block w-100" src="static/Images/carousel/cap1.jpg" style="text-align:center;" alt="slide1">
+                        <div class="carousel-caption">
+                            <!-- <h1>Image 2</h1>
+                            <p>Baseball Graph Baseball Graph Baseball Graph</p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slide">
+                        <img class="d-block w-100" src="static/Images/carousel/cards.jpg" style="text-align:center;" alt="slide2">
+                        <div class="carousel-caption">
+                            <!-- <h1>Image 3</h1> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slide">
+                        <img class="d-block w-100" src="static/Images/carousel/retro1.jpg" style="text-align:center;" alt="slide3">
+                        <div class="carousel-caption">
+                            <!-- <h1>Image 4</h1> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slide">
+                        <img class="d-block w-100" src="static/Images/carousel/cards2.jpg" style="text-align:center;" alt="slide4">
+                        <div class="carousel-caption">
+                            <!-- <h1>Image 5</h1> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slide">
+                        <img class="d-block w-100" src="static/Images/carousel/baseballs.jpg" style="text-align:center;" alt="slide5">
+                        <div class="carousel-caption">
+                            <!-- <h1>Image 5</h1> -->
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                    
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src="static/js/analysis.js"></script>  
+
+    <!-- Bootstrap JS scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+
+</body>
+</html>
