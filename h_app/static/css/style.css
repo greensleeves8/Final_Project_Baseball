@@ -13,6 +13,18 @@ p {
   margin: 20px;
 }
 
+.d-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.carousel-inner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
   
 *{
   margin: 0;
