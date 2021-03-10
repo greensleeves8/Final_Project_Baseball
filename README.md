@@ -162,6 +162,14 @@ Once the machine learning model and sampling method were decided upon through tr
 ## Visualizations
 Visualizations were created in Tableau to demonstrate how rare it is to be inducted to the Baseball Hall of Fame, and how it has become even more difficult to be competitive over time. A snapshot of these visualizations will be shown on the web app. 
 
+![image](h_app/static/Images/final/Players_vs_HOF_status.png)
+
+This chart illustrates the increasing rarity of which players get inducted into the HOF. As the total number of players has steadily increased over the past 150 years - the number of inducted players has risen at a much slower scale.
+
+![image](h_app/static/Images/final/HOF_inducted_Bar.png)
+
+This bar chart visualization shows total number of players inducted to the HOF in baseball history, total number of players nominated but not inducted to the HOF, and lastly (also by far most commonly) all other players. This visualization helps to clarify and separate the nominees who did and did not get in to the HOF.
+
 ## Deployment
 For User-Facing purposes - technologies implemented were a combination of
 
@@ -185,15 +193,30 @@ For User-Facing purposes - technologies implemented were a combination of
 
 ### Heroku 
 Heroku is a cloud-based service that has the functionality to connect to Github, which creates automatic deployment of our project.  
+
 [Hall of Fame Baseball App](https://hall-of-fame-baseball.herokuapp.com/)
+
+
 Continuous code can be committed to the repository and then deployed within the Heroku platform by initially setting up the following files:
 * h_app: is the app folder created to contain the flask app and supporting templates
 	* __init__.py: the file that creates the flask app and additional routes
 	*static: this is a folder created to hold javascript and CSS
 		* CSS: a folder that contains the CSS functionality 
-			* style.css: contains the styling for the app
+			* style.css: contains the styling for the index page
+			* analysis.css: contains the styling for the analysis page
+			* background.css: contains the styling for the background page
+			* batting.css: contains the styling for the batting page
+			* pitching.css: contains the styling for the pitching page
+		* Images: this file contains all the images that have been finalized for the app
+			* carousel: these are the images used on the first page
+			* final: these are the images used under the analysis page
 		* JS: a folder that contains javascript files
 			* script.js: this file creates the drop down functionality of baseball players
+			* analysis.js: javascript functionality for popup feature on images
+			* batter_data.js: batter data set up with variables for the batter.js file to read 
+			* batter.js: javascript functionality to create filtered table under the batting page
+			* pitcher_data.js: pitcher data set up with variables for the pitcher.js file to read 
+			* pitcher.js: javascript functionality to create filtered table under the pitching page
 	* templates: the folder created within the app folder to organize html files
 		* base.html: creates the initial structure for our webpage
 		* index.html: an extension from our base.html and contains the main content
