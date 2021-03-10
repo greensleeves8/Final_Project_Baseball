@@ -1,6 +1,8 @@
 body {
-    background-color: #B0E0E6;
-  }
+  background-color: #B0E0E6;
+  margin: 20px;
+}
+
 table, th, td {
     border: 1px solid black;
 }  
