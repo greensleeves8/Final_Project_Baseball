@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Hall of Fame Prediction</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Predict Hall of Fame</a>
+        </nav>
+        <div class = "container-fluid">
+            <div class = "row">
+                <div class = "col-md-3">
+                    <div class="filters">
+                        <form>
+                            <p>Filter Search</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <label for="First Name">Enter First Name</label>
+                                    <input type="text" id="First Name" class="form-control" placeholder="Jackie"  />
+                                </li>
+                                <li class="list-group-item">
+                                    <label for="Last Name">Enter Last Name</label>
+                                    <input type="text" id="Last Name" class="form-control" placeholder="Robinson" />
+                                </li>
+                                <li class="list-group-item">
+                                    <label for="Inducted">Inducted Status</label>
+                                    <input type="text" id="Inducted" class="form-control" placeholder="Y or N" />
+                                </li>
+                                <li class="list-group-item">
+                                    <label for="HOF Prediction">HOF Prediction</label>
+                                    <input type="text" id="HOF Prediction" class="form-control" placeholder="Y or N" />
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+
+                <div class = "col-md-9">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>G</th>
+                                <th>AB</th>
+                                <th>R</th>
+                                <th>H</th>
+                                <th>2B</th>
+                                <th>3B</th>
+                                <th>HR</th>
+                                <th>RBI</th>
+                                <th>SB</th>
+                                <th>BB</th>
+                                <th>SO</th>
+                                <th>HBP</th>
+                                <th>SH</th>
+                                <th>SF</th>
+                                <th>AVG</th>
+                                <th>OBP</th>
+                                <th>SLG</th>
+                                <th>Inducted</th>
+                                <th>HOF Prediction</th>
+                                <th>Yes HOF Probabilty</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/batter_data.js"></script>
+    <script src="static/js/batter.js"></script>
+</body>
+</html>
