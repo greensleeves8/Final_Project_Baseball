@@ -10,7 +10,7 @@ The National Baseball Hall of Fame inducted its first eligible members in 1936. 
 * Was an active MLB player at least 15 years prior to the year of the election.
 * Has been retired for at least 5 years prior to the election.
 * Has played in a minimum of 10 seasons.
-* Cannot be on the Baseball Hall of Fame ineligible list.  
+* Is not on the Baseball Hall of Fame ineligible list.  
 
 Once a candidate is deemed eligible, multiple criteria are taken into consideration when voting occurs, such as the player's record/statistics, ability, integrity, and contribution to a team.  Members of the BBWAA cast no more than 10 votes on each years ballot for the candidates of their choosing.  Any candidate that receives votes on at least 75% of the ballots will be inducted to the Hall of Fame.
 
@@ -37,12 +37,13 @@ answered with our Hall of Fame Predictor.
 	- [Technologies](#technologies)
 	- [Resources](#resources)
 	- [Data Exploration](#data-exploration)
-	- [Extract, Transform, Load](#extract-transform-load)
+		- [Extract, Transform, Load](#extract-transform-load)
 	- [Database](#database)
 	- [Machine Learning Model](#machine-learning-model)
 	- [Visualizations](#visualizations)
 	- [Deployment](#deployment)
 		- [Heroku](#heroku)
+	- [Future Advancements](#future-advancements)
 	- [Credits](#credits)
 
 ## Communication
@@ -80,7 +81,7 @@ The following various technologies will be used throughout the completion of thi
 
 ## Data Exploration
 
-## Extract, Transform, Load
+### Extract, Transform, Load
 
 Batting ETL:
 
@@ -118,7 +119,7 @@ Once our tables were created in Postgres, the next step was to pull the tables f
 
 ## Machine Learning Model
 
-An ideal machine learning model for determining Baseball Hall of Fame inductees is one that has a high recall/sensitivity score, exemplifying the model's capability of finding worthy candidates for the Hall of Fame within a given dataset (finding a yes in a sea of no's).  Focusing on the model's ability to predict whether a player has been or will be inducted to the Hall of Fame is more important than the model's ability to predict if a player has not or will not be inducted into the Hall of Fame.  After testing various machine learning models and adjusting the parameters for the models, the model that performed the best was used with the pitching dataset.   
+An ideal machine learning model for determining Baseball Hall of Fame inductees is one that has a high recall/sensitivity score, exemplifying the model's capability of finding worthy candidates for the Hall of Fame within a given dataset (finding a yes in a sea of no's).  Focusing on the model's ability to predict whether a player has been or will be inducted to the Hall of Fame is more important than the model's ability to predict if a player has not or will not be inducted into the Hall of Fame.  After testing various machine learning models on the batting dataset and adjusting the parameters for the models, the model that performed the best was used with the pitching dataset.   
 
 Prior to developing and running the machine learning models, the same preprocessing steps were applied to the batting dataset for each model:
 
@@ -128,7 +129,7 @@ Prior to developing and running the machine learning models, the same preprocess
 * The assigned variables are then split into training and testing sets, utizlizing **train_test_split** from scikit-learn.
 * Finally, **X** is then scaled so that all statistics within the datset fall within the same range of values, helping the model interpret the data more accurately.  
 
-Once preprocessing the data was complete the XGBoost classifier, Random Forest Classifier and Logisitic Regression machine learning models were used to make predict the inducted status of baseball batters for the Baseball Hall of Fame.  The first model that was tested, the Random Forest Classifier model, performed with 99.3% accuracy, 0.63 precision and 0.44 recall for classifying an inducted status for the Hall of Fame.  Adjustments were made to the sampling sizes in an effort to bring balance to the overwhelming amount of baseball players not inducted into the Hall of Fame.  Even with these adjustments, the recall performance for this model was not ideal. A Logisitic Regression model was then developed and implemented, with the hope that setting the threshold would provide more reliable results (circling back to the requirement of at least 75% of the total votes cast in order to be inducted).  Adjusting the threshold, unfortunately failed in adding value to the results.  Finally, using a XGBoost classification model performed with the highest recall of all the models.  The SMOTE and SMOTEEN sampling methods were implemented to address the dataset's highly imbalanced status, in an effort to bring more balance to the model's interpretation of the dataset.  Combining the XGBoost classification model with SMOTE sampling, proved to be the most reliable model of all that were tested.  Below are the performance results of all tested models with the batting dataset:
+Once preprocessing the data was complete the XGBoost classifier, Random Forest Classifier and Logisitic Regression machine learning models were used to predict the inducted status of baseball batters for the Baseball Hall of Fame.  The first model that was tested, the Random Forest Classifier model, performed with 99.3% accuracy, 0.63 precision and 0.44 recall for classifying an inducted status for the Hall of Fame.  Adjustments were made to the sampling sizes in an effort to bring balance to the overwhelming amount of baseball players not inducted into the Hall of Fame.  Even with these adjustments, the recall performance for this model was not ideal. A Logisitic Regression model was then developed and implemented, with the hope that setting the threshold would provide more reliable results (circling back to the requirement of at least 75% of the total votes cast in order to be inducted).  Adjusting the threshold, unfortunately failed in adding value to the results.  Finally, using a XGBoost classification model performed with the highest recall of all the models.  The SMOTE and SMOTEEN sampling methods were implemented to address the dataset's highly imbalanced status, in an effort to bring more balance to the model's interpretation of the dataset.  Combining the XGBoost classification model with SMOTE sampling, proved to be the most reliable model of all that were tested.  Below are the performance results of all tested models with the batting dataset:
 
 
 | Model and Sampling Method | Accuracy | Yes/No |Precision | Recall | F-1 Score | | | Confusion Matrix | |
@@ -149,9 +150,9 @@ Once preprocessing the data was complete the XGBoost classifier, Random Forest C
 | | | *Yes* | 0.71 | 0.35 | 0.47 | | *Actual No* | 4338 | 5 |
 | | | | | | | | *Actual Yes* | 22 | 12 |
 
-Although, the Random Forest Classifier model combined with SMOTE sampling performed with a the second highest recall, the difference between the false positives and true positives for the RFC model with SMOTE was much greater than those of the XGBoost model with SMOTE.  Due to this reasoning and the model's overall performance, the XGBoost classification model combined with SMOTE performed the best when presented with the Hall of Fame dataset.
+Although, the Random Forest Classifier model combined with SMOTE sampling performed with the second highest recall, the difference between the false positives and true positives for the RFC model with SMOTE was much greater than those of the XGBoost model with SMOTE.  Due to this reasoning and the model's overall performance, the XGBoost classification model combined with SMOTE performed the best when presented with the Hall of Fame dataset.
 
-Once the machine learning model and sampling method were decided upon through training and testing of the batter dataset, the same process was appied to the pitcher dataset.  Below are the results:
+Once the machine learning model and sampling method were decided upon through training and testing of the batter dataset, the same process was applied to the pitcher dataset.  Below are the results:
 
 | Model and Sampling Method | Accuracy | Yes/No |Precision | Recall | F-1 Score | | | Confusion Matrix | |
 | --------------- | -------- | ------ |--------- | ------ | --------- | - | - | - | - |
@@ -226,6 +227,10 @@ Continuous code can be committed to the repository and then deployed within the 
 * requirements.txt: this text file shows all the packages being used 
 * wsgi.py: this file imports our flask app
 * hof_scraping.py: contains all dependencies and functionality in order to pull the images from the baseball hall of fame website into our heroku app
+
+
+## Future Advancements
+- 
 
 ## Credits
 
