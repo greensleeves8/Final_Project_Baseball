@@ -81,6 +81,16 @@
                     </div>
                 </div>
 
+                <div class="box"
+                <p>
+                  <h4><center><b>How to use the table:</b></center></h4></p>
+                  <p>1) Search for you desired player by either first name, last name, or both, and the table will produce their career stats, their inducted status, and their HOF prediction and probability our model produced. </p>
+                  <p>2) You can search by Y or N by Inducted Status or HOF Prediction to find current Hall of Famers or Hall of Famers as predicted by the model. </p>
+                  <p>Combine those searches (Inducted: N, HOF Prediction: Y) to find overlooked stars, or potentially overrated ones (Inducted: Y, HOF Prediction: N)
+                  </p>
+              </div>
+
+
                 <p style="text-align:center;">
                   <img id="img" src="static/Images/Table_Key.PNG"></a>
               </p>
@@ -89,33 +99,30 @@
                     <table class="table table-striped">
                       <table border="10">
                         <thead>
-                            <tr>
-                                <th style="text-align:center">First Name</th>
-                                <th style="text-align:center">Last Name</th>
-                                <th style="text-align:center">W</th>
-                                <th style="text-align:center">L</th>
-                                <th style="text-align:center">G</th>
-                                <th style="text-align:center">GS</th>
-                                <th style="text-align:center">CG</th>
-                                <th style="text-align:center">SHO</th>
-                                <th style="text-align:center">SV</th>
-                                <th style="text-align:center">H</th>
-                                <th style="text-align:center">ER</th>
-                                <th style="text-align:center">HR</th>
-                                <th style="text-align:center">BB</th>
-                                <th style="text-align:center">SO</th>
-                                <th style="text-align:center">WP</th>
-                                <th style="text-align:center">HBP</th>
-                                <th style="text-align:center">R</th>
-                                <th style="text-align:center">IP</th>
-                                <th style="text-align:center">Win Percentage</th>
-                                <th style="text-align:center">Strikeout to Walk</th>
-                                <th style="text-align:center">WHIP</th>
-                                <th style="text-align:center">ERA Corrected</th>
-                                <th style="text-align:center">Inducted</th>
-                                <th style="text-align:center">HOF Prediction</th>
-                                <th style="text-align:center">Yes HOF Probabilty</th>
-                            </tr>
+                          <tr>
+                            <th style="text-align:center">First Name</th>
+                            <th style="text-align:center">Last Name</th>
+                            <th style="text-align:center">G</th>
+                            <th style="text-align:center">AB</th>
+                            <th style="text-align:center">R</th>
+                            <th style="text-align:center">H</th>
+                            <th style="text-align:center">2B</th>
+                            <th style="text-align:center">3B</th>
+                            <th style="text-align:center">HR</th>
+                            <th style="text-align:center">RBI</th>
+                            <th style="text-align:center">SB</th>
+                            <th style="text-align:center">BB</th>
+                            <th style="text-align:center">SO</th>
+                            <th style="text-align:center">HBP</th>
+                            <th style="text-align:center">SH</th>
+                            <th style="text-align:center">SF</th>
+                            <th style="text-align:center">AVG</th>
+                            <th style="text-align:center">OBP</th>
+                            <th style="text-align:center">SLG</th>
+                            <th style="text-align:center">INDUCTED</th>
+                            <th style="text-align:center">HOF Prediction</th>
+                            <th style="text-align:center">Yes HOF Probability</th>
+                          </tr>
                         </thead>
                         <tbody></tbody>
                     </table>

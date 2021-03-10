@@ -13,6 +13,8 @@ ul.list-group {
   border: 1px solid black;
   justify-content: center;
   display: flex;
+  margin: 40px 0px 0px 40px;
+  width: 300px;
 }
 
 li.list-group-item {
@@ -22,11 +24,28 @@ li.list-group-item {
   display: flex;
 }
 
+.form-control {
+  background-color: #F5F5DC;
+}
+
 p {
   margin: 20px;
   padding-right: 20px;
+  background-color: #b0e0e6;
+  justify-content: center;
+  display: flex;
+  line-height: 2em;
+  margin-bottom: 20px;
 }
 
+.box {
+  box-sizing: content-box;
+  float: left;
+  width: 500px;
+  margin: 20px 0px 0px 40px;
+  padding: 0px 0px 0px 40px;
+  border: 10px #b0e0e6;
+}
 
 
 

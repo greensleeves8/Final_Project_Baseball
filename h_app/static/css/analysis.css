@@ -13,3 +13,9 @@ body {
     text-align: center;
     padding: 10px 20px;
   }
+
+  p {
+    margin: 20px;
+    padding-right: 20px;
+  }
+  
