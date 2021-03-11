@@ -20,7 +20,7 @@ Pitching:
 Our pitching page includes the same format and functoinality to remain as user friendly as possible. (example demo)
 
 Analysis: 
-Our analysis page has all the visualizations created in POSTGRES.
+Our analysis page has all the visualizations created in Tableau
 
 This bar chart visualization shows total number of players inducted to the HOF in baseball history, total 
 number of players nominated but not inducted to the HOF, and lastly (also by far most commonly) all other 
