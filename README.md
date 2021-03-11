@@ -288,3 +288,6 @@ this material is allowed under the same Creative Commons License.
 
 “Homepage.” Baseball Hall of Fame, 23 Feb. 2021, baseballhall.org/. 
 This resource was used to obtain the Baseball Hall of Fame logo that is presented at the top of this document. 
+
+Mark Otto, Jacob Thornton. “Navbar.” · Bootstrap, getbootstrap.com/docs/4.0/components/navbar/. 
+This was the site that was used to create the navbar within the application.
