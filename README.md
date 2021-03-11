@@ -209,9 +209,14 @@ For User-Facing purposes - technologies implemented were a combination of
 		- Index of pitching-categorized players pertaining to the project's player datasets
 		- Scraping page which allows user-exploration of the Hall of Fame website
 		- Machine Learning prediction page which showcases the model's results to user
-* Bootstrap 4/CSS/JS allowed easy setup of NavBar functionality, a self-rotating image carousel, and many other design and formatting options.
-* Python was used to implement a web-scraping script that allows us to pull current facets of the Baseball Hall of Fame's website such as their latest news article, and most recent historical image from their gallery page.
-* Flask was used to to set up multiple routes for different web application functionalities.
+* Bootstrap 4/CSS/JS was used to implement design features and user experience.
+	- Bootstrap NavBars were created for each page to direct a user across the web app.
+	- Images were hosted in bootstrap formats and syled with CSS.
+	- CSS was also used for text alignments, page padding, and much more.
+	- Javascript was implemented to add dynamic properties to our webpage. For Heroku’s pitching and batting pages, d3 and Javascript functions were used to create interactive tables to explore the pitching and batting datasets.
+* Python was used to implement a web-scraping script that allows us to pull current facets of the Baseball Hall of Fame's website such as their latest news article, and most recent historical image from their gallery page. 
+	- Issues with the Heroku Chrome/Chromdriver buildpacks have kept this feature for local use only.
+* Flask routes connected the above listed html templates in order to foster a particular design for each page the app hosts. 
 
 ### Heroku :computer:
 Heroku is a cloud-based service that has the functionality to connect to Github, which creates automatic deployment of our project.  
