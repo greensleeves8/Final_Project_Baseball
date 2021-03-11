@@ -3,6 +3,7 @@ marp: true
 theme: base
 #class: invert
 ---
+
 # Machine Learning and the Hall of Fame
 Cale Green, Camille Goodwin, Claire Davis, Matt Martin, Silas Cobb, Trey Wehrmeyer 
 
@@ -18,7 +19,11 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
+img[alt=db] { width: 1000px; }
+
+
 </style>
+
 
 # Overview 
 - Proposal
@@ -29,6 +34,11 @@ img[alt~="center"] {
 - Pitch & Selling Points
 - Future Advancements
 
+---
+![](Visualizations/HOF_yes_no.png)
+
+---
+![](Visualizations/HOF_Circle.png)
 
 ---
 # Proposal 
@@ -41,7 +51,7 @@ img[alt~="center"] {
 ---
 # Resources
 
-*[Sean Lahman's Baseball Databse](http://www.seanlahman.com/baseball-archive/statistics/)*
+*[Sean Lahman's Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/)*
 
 *[Baseball Reference](https://www.baseball-reference.com/)*
 
@@ -62,7 +72,7 @@ Tables Used:
 - Python and Pandas for data exploration and ETL
 - PostgreSQL for a database
 - Extreme Gradient Boosting machine learning model
-- Matplotlib for visualization of findings
+- Matplotlib and Tableau for visualization of findings
 - Heroku, Flask, HTML, and JavaScript for dashboard creation and deployment
   
 ---
@@ -90,9 +100,8 @@ Created Career_Pitching_df by:
 - Pull tables from Postgres to machine learning documents with cursor object
 
 ---
-### Entity Relationship Diagram
- ![center](Images/ERD.JPG)
-
+### Database Connection
+ ![db](Images/db_connection.JPG)
 
 ---
 # Live Demo
@@ -108,10 +117,12 @@ https://hall-of-fame-baseball.herokuapp.com/
   - If predicted in HOF, how likely is it true
 
 ---
+### Feature Importances
+![center](Machine_Learning_Models/Viz_Resources/Batting_Feature_Importances.png)
 
-![bg left](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Machine_Learning_Models/Viz_Resources/Batting_Feature_Importances.png)
-
-![bg](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Machine_Learning_Models/Viz_Resources/Batting_Corr.pdf)
+---
+### Correlation Between Batting Features
+![center](Images/batting_correlation.JPG)
 
 ---
 
@@ -136,7 +147,7 @@ https://hall-of-fame-baseball.herokuapp.com/
 
 ---
 
-![bg contain](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Machine_Learning_Models/Viz_Resources/Batter_HOF_2022_Results.png)
+![bg contain](Machine_Learning_Models/Viz_Resources/Batter_HOF_2022_Results.png)
 
 ---
 
@@ -164,9 +175,9 @@ https://hall-of-fame-baseball.herokuapp.com/
 
 ---
 # Future Advancements
-- Expand to other sports, awards, 
+- Expand to other sports or awards
 - Predict all star teams
-- Prediction table to display odds of players being inducted
+- More interactive pieces - prediction table to enter in stats and see probability of being inducted
 - Work on style CSS to be more user friendly and clean
 
 ---
