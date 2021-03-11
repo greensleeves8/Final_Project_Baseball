@@ -1,0 +1,46 @@
+Proposal:
+Our initiative is to create an application that uses machine learning to predict future members of the hall of fame,
+evaluate underrated players and determine the reason statistically worthy players have not been added. 
+
+Live Demo: 
+
+Homepage:
+Our landing page provides insight on the reason the Hall of Fame Predictor was created, the players it will analyze and 
+it's functionality.
+
+Background:
+The background page includes the requirements for all individuals inducted into the hall of fame, how this is utilized in our
+application and the technologies involved to generate results.
+
+Batting:
+Our batting page provides a table filter that shows instant results. (example demo) This predictor is user friendly and the key 
+for each column is included so anyone can understand the table. 
+
+Pitching:
+Our pitching page includes the same format and functoinality to remain as user friendly as possible. (example demo)
+
+Analysis: 
+Our analysis page has all the visualizations created in POSTGRES.
+
+This bar chart visualization shows total number of players inducted to the HOF in baseball history, total 
+number of players nominated but not inducted to the HOF, and lastly (also by far most commonly) all other 
+players. This visualization helps to clarify and separate the nominees who did and did not get in to the HOF.
+
+The above circle chart shows the density of players elected and the density of players nominated for Hall of
+Fame induction relative to the total number of players in baseball history. This visualization puts into
+perspective the rarity of even being nominated as a potential Hall of Famer. The “bullseye” of this graph
+then illustrates the rarity within that nominee group to become fully inducted
+
+
+This chart illustrates the increasing rarity of which players get inducted into the HOF. As the total number of players has 
+steadily increased over the past 150 years - the number of inducted players has risen at a much slower scale.
+
+
+The above shows the number of Hall of Fame nominees versus the number of those nominees who were actually inducted. 
+As the slope of nominees seems to increase - the slope inductees remains relatively the same. 
+This further indicates the increased rarity of being Hall of Fame induction over time.
+
+It is showcased above that there seems to be an inverse relationshipp between years of Hall Of Fame nomination and 
+chance of induction. Although there is a higher number of players who were nominated once, their odds of induction are low. 
+Although players are less likely to receive multiple nominations - they seem more likely to be inducted the more nominations 
+they receive.  
