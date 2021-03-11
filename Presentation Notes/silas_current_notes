@@ -1,0 +1,18 @@
+Technologies: 
+In order to efficiently achieve our goal of identifying past and predicting future Hall of Fame players we used this full list of technologies.
+•	Python and Pandas which were used for data exploration and ETL
+•	PostgreSQL was used for a database
+•	Extreme Gradient or XGBoost classifier with Smote, Random Forest Classifier and Logisitic Regression were all used for Machine Learning
+•	Matplotlib for visualization of our findings
+•	Heroku, Flask, HTML, and JavaScript for dashboard creation and deployment
+ETL(Extract, Transform, Load)
+•	ETL was one of our earlier steps we took because this helped us clean up our databases to make them more useful for our Machine Learning model. 
+•	 When we started making decisions about how we would want our predictions to run we decided to split the data frame up between batters and pitchers. 
+•	Both batters and pitchers CSV’s came from Sean Lahman’s baseball database.
+•	We created new df’s  “Career_Batting and Career_pitching” by reading in the Hall of Fame data into our batters and pitchers CSV files.
+•	This allowed up to make the appropriate filters while adding additional columns that were not in the original df.
+•	For example in our batting we needed to add key statistics such as batting average, on base percentage, and slugging percentage.
+•	While in our pitching we added statistics such as win percentage, strikeout/walk ratio, walks per inning pitched and earned run average.
+•	All of these additions were essential statistics that were needed in determining what a Hall of Fame player is.
+•	There were a couple of issues we had to address when creating the batting df was making our filter too narrow at first and cutting out unnecessary players
+•	And in the pitching df we noticed that the earned run average on the CSV was not correct so we had to recalculate it
