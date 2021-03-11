@@ -101,18 +101,45 @@ https://hall-of-fame-baseball.herokuapp.com/
 
 ---
 # Machine Learning Model
-- Targeted high precision scores 
-  - If predicted in HOF, how likely is it true
-- High recall
+
+- Targeted models with high recall scores
   - Finding eligible players from so many ineligible
-- Random Forest Classifier: 99.2% Accuracy, 0.63 precision, 0.44 recall
-- Logistic Regression: 99.4% Accuracy, 0.59 precision, 0.56 recall 
-- XGBoost with SMOTE: 98.9% Accuracy, 0.46 precision, 0.77 recall
+- Secondary priority, precision scores 
+  - If predicted in HOF, how likely is it true
 
 ---
-<!-- decision tree images -->
+
+![bg left](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Machine_Learning_Models/Viz_Resources/Batting_Feature_Importances.png)
+
+![bg](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Machine_Learning_Models/Viz_Resources/Batting_Corr.pdf)
 
 ---
+
+## Comparison of Tested Models
+| Model and Sampling Method | Accuracy | Yes/No |Precision | Recall | F-1 Score |
+| --------------- | -------- | ------ |--------- | ------ | --------- |
+| *XGBoost Classifier with SMOTE* | 98.9% | *No* | 1.00 | 0.99 | 0.99 |
+| | | *Yes* | 0.46 | 0.77 | 0.58 |
+| | | | | | |
+| *Random Forest Classifier (RFC)* | 99.2% | *No* | 0.99 | 1.00 | 1.00 |
+| | | *Yes* | 0.63 | 0.44 | 0.52 |
+| | | | | | |
+| *RFC with SMOTE* | 98.5% | *No* | 1.00 | 0.99 | 0.99 |
+| | | *Yes* | 0.31 | 0.76 | 0.44 |
+| | | | | | |
+| *Logistic Regression* | 99.4% | *No* | 1.00 | 1.00 | 1.00 |
+| | | *Yes* | 0.59 | 0.56 | 0.58 |
+| | | | | | |
+| *Logistic Regression with 75% Threshold* | 99.4% | *No* | 0.99 | 1.00 | 1.00 |
+| | | *Yes* | 0.71 | 0.35 | 0.47 |
+| | | | | | |
+
+---
+
+![bg contain](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Machine_Learning_Models/Viz_Resources/Batter_HOF_2022_Results.png)
+
+---
+
 # Deployment and Heroku
 - Used HTML, CSS, Boostrap, JS, Python, and Flask to build dynamic webpage
 - Ability to scrape HOF website top article and pictures
