@@ -142,9 +142,14 @@ https://hall-of-fame-baseball.herokuapp.com/
 
 # Deployment and Heroku
 - Used HTML, CSS, Boostrap, JS, Python, and Flask to build dynamic webpage
-- Ability to scrape HOF website top article and pictures
+- Ability to scrape HOF website top article and pictures (Currently local feature)
 - Set up file system according to Heroku's speicifcations to deploy our project
   - h_app, html files, Procfile, requirements, wsgi
+
+---
+
+### NavBar Breakdown
+![center](Images/navBarExample.png)
 
 ---
 ### Code to Filter Interactive Table
