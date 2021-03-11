@@ -31,7 +31,7 @@ of accuracy. Our predictions are based on a database built of nearly every playe
 to be elected next year? Who had the better Hall of Fame resume, Babe Ruth or Hank Aaron? Which non-members have the most compelling statistical case for inclusion? All of these can be 
 answered with our Hall of Fame Predictor.
 
-# Table of Contents
+## Table of Contents :memo:
 - [Table of Contents](#table-of-contents)
 	- [Communication](#communication)
 	- [Technologies](#technologies)
@@ -46,7 +46,7 @@ answered with our Hall of Fame Predictor.
 	- [Future Advancements](#future-advancements)
 	- [Credits](#credits)
 
-## Communication
+## Communication :phone:
 
 The below methods of communication have been agreed upon by all team members and will be utilized daily and weekly to successfully complete the project:
 
@@ -55,17 +55,17 @@ The below methods of communication have been agreed upon by all team members and
 * Slack messaging to post and share a running thread of resources, ideas, and updates visible to all team members.
 *  A Trello board will be utilized to better manage incomplete, in progress, and completed tasks for the project by team members.  
 
-## Technologies
+## Technologies :iphone:
 
 The following various technologies will be used throughout the completion of this project:
 
 * Python and Pandas for data exploration and ETL
 * PostgreSQL for a database
-* Random Forest Classifier machine learning model
+* XGBoost classifier, Random Forest Classifier and Logisitic Regression machine learning model
 * Matplotlib for visualization of findings
 * Heroku, Flask, HTML, and JavaScript for dashboard creation and deployment
 
-## Resources
+## Resources :books:
 
 [Baseball-Reference.com: MLB Stats, Scores, History, and Records](https://www.baseball-reference.com/ "Baseball-Reference.com")
 
@@ -79,7 +79,7 @@ The following various technologies will be used throughout the completion of thi
 [Fangraphs](https://www.fangraphs.com/)
 
 
-## Data Exploration
+## Data Exploration :satellite:
 
 ### Extract, Transform, Load
 
@@ -111,13 +111,13 @@ dataframe of career statistics and Hall of Fame status. Finally the dataframe wa
 small sample size, and columns were dropped due to collinearity or redundancy. 
 - We did run into an issue early on when creating the Career_Pitching_df.  We found that the CSV file did not have the correct pitcher ERA because the IPOuts column was not in its final form.  We had to add an IP column by dividing the IPOuts by three.
 
-## Database
+## Database :file_folder:
 
 Once ETL was finalized we worked on putting the four data frames created (career_batter_df, hall_batter_df, career_pitching_df, and hall_pitching_df) into a local host PostgreSQL database. We were able to create a connection by adding code into the Career_Batters and Career_Pitching IPYNB files. Steps taken to create this connection were to import create_engine from sqlalchemy, import the databse password from a config file, create a connection string and database engine, then to import each table. 
 
 Once our tables were created in Postgres, the next step was to pull the tables from Postgres to run through the machine learning model. We added this connection in the Batter and Pitcher RFC Model notebooks so we could pull the tables needed to run through the model. This was done by establishing a connection to the database with a cursor object, writing SQL statements to seelct the entirety of our tables, and saving them to a variable we could use moving forward. 
 
-## Machine Learning Model
+## Machine Learning Model :floppy_disk:
 
 An ideal machine learning model for determining Baseball Hall of Fame inductees is one that has a high recall/sensitivity score, exemplifying the model's capability of finding worthy candidates for the Hall of Fame within a given dataset (finding a yes in a sea of no's).  Focusing on the model's ability to predict whether a player has been or will be inducted to the Hall of Fame is more important than the model's ability to predict if a player has not or will not be inducted into the Hall of Fame.  After testing various machine learning models on the batting dataset and adjusting the parameters for the models, the model that performed the best with the batter dataset was then used with the pitching dataset.   
 
@@ -176,7 +176,7 @@ Some post-processing of the dataframes occured to add more detailed columns for 
 
 Overall the model's results, though not perfect, did shed light on potential future inductees and other members of baseball history that should be in the Baseball Hall of Fame.  The model predicted players like Barry Bonds and Alex Rodriguez, who are currently considered major contirbutors to baseball, to be inductees into the Hall of Fame.  Additionally, Tommy Corcoran and Steve Brodie, are players with stats that would make them contenders for a place in the Baseball Hall of Fame (based on the model), but were not inducted.  Various reasons such as competition with better players' stats of the same era and their contributions to baseball as a sport- which is not measured within the dataset used in this study, most likely impacted their ability to be inducted into the Baseball Hall of Fame.
 
-## Visualizations
+## Visualizations :camera:
 Visualizations were created in Tableau to demonstrate how rare it is to be inducted to the Baseball Hall of Fame, and how it has become even more difficult to be competitive over time. A snapshot of these visualizations will be shown on the web app. 
 
 ![image](h_app/static/Images/final/Players_vs_HOF_status.png)
@@ -187,7 +187,7 @@ This chart illustrates the increasing rarity of which players get inducted into 
 
 This bar chart visualization shows total number of players inducted to the HOF in baseball history, total number of players nominated but not inducted to the HOF, and lastly (also by far most commonly) all other players. This visualization helps to clarify and separate the nominees who did and did not get in to the HOF.
 
-## Deployment
+## Deployment :inbox_tray:
 For User-Facing purposes - technologies implemented were a combination of
 
 - HTML 
@@ -196,7 +196,7 @@ For User-Facing purposes - technologies implemented were a combination of
 - JS 
 - Python/Flask 
 
-* HTML was used to structure and design our webpages 
+* HTML (Hypertext Markup Language) was the code that is used to structure our web page and its content 
 	* 7 html files were created to host 6 different user experiences: 
 		- Home Page
 		- Project Background
@@ -208,7 +208,7 @@ For User-Facing purposes - technologies implemented were a combination of
 * Python was used to implement a web-scraping script that allows us to pull current facets of the Baseball Hall of Fame's website such as their latest news article, and most recent historical image from their gallery page.
 * Flask was used to to set up multiple routes for different web application functionalities.
 
-### Heroku 
+### Heroku :computer:
 Heroku is a cloud-based service that has the functionality to connect to Github, which creates automatic deployment of our project.  
 
 [Hall of Fame Baseball App](https://hall-of-fame-baseball.herokuapp.com/)
@@ -245,10 +245,10 @@ Continuous code can be committed to the repository and then deployed within the 
 * hof_scraping.py: contains all dependencies and functionality in order to pull the images from the baseball hall of fame website into our heroku app
 
 
-## Future Advancements
+## Future Advancements :rocket:
 - 
 
-## Credits
+## Credits :bookmark_tabs:
 
 This project would not have been possible without the use of [Sean Lahman's Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/), which is used here under the conditions of the
 [Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/). Any changes made to the original database have been described in this README. Further use of 
