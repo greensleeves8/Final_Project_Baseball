@@ -33,7 +33,6 @@ answered with our Hall of Fame Predictor.
 
 ## Table of Contents :memo:
 - [Table of Contents](#table-of-contents)
-	- [Communication](#communication)
 	- [Technologies](#technologies)
 	- [Resources](#resources)
 	- [Data Exploration](#data-exploration)
@@ -46,15 +45,6 @@ answered with our Hall of Fame Predictor.
 	- [Future Advancements](#future-advancements)
 	- [Credits](#credits)
 
-## Communication :phone:
-
-The below methods of communication have been agreed upon by all team members and will be utilized daily and weekly to successfully complete the project:
-
-* GitHub will house the project's repository where team members will be able to push completed work to feature branches, which will then be merged to the main accordingly.
-* Zoom virtual meetings as needed outside of devoted Tuesday and Thursday evenings to further supplement collaboration and progress.
-* Slack messaging to post and share a running thread of resources, ideas, and updates visible to all team members.
-*  A Trello board will be utilized to better manage incomplete, in progress, and completed tasks for the project by team members.  
-
 ## Technologies :iphone:
 
 The following various technologies will be used throughout the completion of this project:
@@ -62,16 +52,16 @@ The following various technologies will be used throughout the completion of thi
 * Python and Pandas for data exploration and ETL
 * PostgreSQL for a database
 * XGBoost classifier, Random Forest Classifier and Logisitic Regression machine learning model
-* Matplotlib for visualization of findings
+* Matplotlib and Tableau for visualization of findings
 * Heroku, Flask, HTML, and JavaScript for dashboard creation and deployment
 
 ## Resources :books:
 
-[Baseball-Reference.com: MLB Stats, Scores, History, and Records](https://www.baseball-reference.com/ "Baseball-Reference.com")
+[Sean Lahman's Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/ "Sean Lahman's Baseball Database")
 
 Lahman’s baseball database is an open source archive of baseball statistics from as far back as 1871, all the way up to present day (2020 season). Datasets are supplied in many varieties by Lahman. Tables with historical batting stats for all players (1872-2020), pitching statistics for pitchers, and even a table of player’s Hall of Fame induction opportunities. Sean Lahman is an acclaimed journalist for USA Today, and baseball research analyst for companies like ESPN.
 
-[Sean Lahman's Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/ "Sean Lahman's Baseball Database")
+[Baseball-Reference.com: MLB Stats, Scores, History, and Records](https://www.baseball-reference.com/ "Baseball-Reference.com")
 
 baseball-reference.com is a website that hosts baseball stats and history. It is widely considered as an industry-standard source of statistical data for baseball. Although the data on baseball-reference is pay to use, the site gave valuable insight in our discovery phase regarding what downloadable and standardized datasets we should be looking for and what features we may look to create. The site even lists Lahman’s open source project for those who want a large volume of data/statistics for free.
 
@@ -81,7 +71,7 @@ The baseball hall of fame’s website was used as a resource for image collectio
 
 [Fangraphs](https://www.fangraphs.com/)
 
-Fangraphs is another widely used site for historical baseball data. One helpful feature of Fangraphs is that it offers the ability to build out tables/reports and save those reports locally. To create a table of upcoming Hall of Fame ballots (2021, 2022), the players eligible were taken from baseball-reference and then turned into a table in order to run the machine learning model to predict future inductees.
+Fangraphs is another widely used site for historical baseball data, with a focus on sabermetric analysis. One helpful feature of Fangraphs is that it offers the ability to build out tables/reports and save those reports locally. To create a table of upcoming Hall of Fame ballots (2021, 2022, 2023), the players eligible were taken from baseball-reference and then turned into a table in order to run the machine learning model to predict future inductees.
 
 
 ## Data Exploration :satellite:
@@ -100,7 +90,7 @@ an additional level of filtering was added to omit pitchers inducted to the Hall
 skew the results of the model (players with under 3000 career at-bats who had been inducted to the Hall of Fame were omitted, which removed 71 entries from the dataframe).
 At this point, our training dataframe was complete, containing 17,522 of the roughly 20,000 players to have appeared in Major League Baseball history, and all of
 the position players to be elected to the Hall of Fame. 
-- One of the issues we ran into on the Career_Batting_df was making our filter too narrow. We started by creating a filter of 2,000 at-bats(Ab) or higher and this ended up dropping our eligible player much lower than we wanted. 
+- One of the issues we ran into on the Career_Batting_df was making our filter too narrow. We started by creating a filter of 2,000 at-bats (AB) or higher and this ended up dropping our eligible player much lower than we wanted. 
 We ended up filtering out any player who did not have an AB in the MLB since that helped eliminate pitchers and players with limited or no batting stats. One final
 issue that arose in the process of creating our training dataframe was how to handle pitchers in the batting dataframe. National League pitchers and any pitcher to play before
 the advent of the Designated Hitter rule accumulated fairly large amounts of career at-bats, with near universally poor performance. Because any of the pitchers would show up
@@ -115,6 +105,18 @@ Hits per Inning Pitched, and Earned Run Average. Existing null values were then 
 dataframe of career statistics and Hall of Fame status. Finally the dataframe was filtered to omit players who had never recorded a strike out or had an infinite Strikeout/Walk ratio due to
 small sample size, and columns were dropped due to collinearity or redundancy. 
 - We did run into an issue early on when creating the Career_Pitching_df.  We found that the CSV file did not have the correct pitcher ERA because the IPOuts column was not in its final form.  We had to add an IP column by dividing the IPOuts by three.
+
+A Note on the Statistics Used:
+
+- We chose to mainly focus our analysis on the raw counting statistics provided by Sean Lahman's Baseball Database, with certain basic rate statistics added in (AVG, OBP, SLG for batters, ERA, WHIP, SO/BB ratio for pitchers).
+Due to the nature of Hall of Fame voting, with its human element of being voted on by baseball writers or selection by committee, it made sense to use statistics that have always been readily available, rather 
+than applying a retrospective analysis using current analytical measures such as WAR, WRC+, or others. 
+
+A Note on Negro Leagues Statistics:
+
+- In late 2020, Major League Baseball made the long overdue decision to designate seven specific Negro Leagues between 1920 and 1948 with major league status. There is current painstaking historical research being performed
+to recreate as full of a register of statistics from these leagues as possible, which will then be included in the official historical statistics of Major League Baseball. This research has not been completed at this time, 
+and thus these statistics are omitted from the database at this time.
 
 ## Database :file_folder:
 
@@ -179,7 +181,7 @@ Some post-processing of the dataframes occured to add more detailed columns for 
   * ![2022_Pitching_Ballot](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Machine_Learning_Models/Viz_Resources/Pitching_HOF_2022_Results.png)
 * Additional filtering of the results was added to more easily view how a player's inducted status compared to the model's predictions (this was helpful in analyzing future contenders for the Baseball Hall of Fame and past players that were not inducted into the Hall of Fame).
 
-Overall the model's results, though not perfect, did shed light on potential future inductees and other members of baseball history that should be in the Baseball Hall of Fame.  The model predicted players like Barry Bonds and Alex Rodriguez, who are currently considered major contirbutors to baseball, to be inductees into the Hall of Fame.  Additionally, Tommy Corcoran and Steve Brodie, are players with stats that would make them contenders for a place in the Baseball Hall of Fame (based on the model), but were not inducted.  Various reasons such as competition with better players' stats of the same era and their contributions to baseball as a sport- which is not measured within the dataset used in this study, most likely impacted their ability to be inducted into the Baseball Hall of Fame.
+Overall the model's results, though not perfect, did shed light on potential future inductees and other members of baseball history that should be in the Baseball Hall of Fame.  The model predicted players like Barry Bonds and Alex Rodriguez, who are currently considered major contributors to baseball, to be inductees into the Hall of Fame.  Additionally, Tommy Corcoran and Steve Brodie, are players with stats that would make them contenders for a place in the Baseball Hall of Fame (based on the model), but were not inducted.  Various reasons such as competition with better players' stats of the same era and their contributions to baseball as a sport- which is not measured within the dataset used in this study, most likely impacted their ability to be inducted into the Baseball Hall of Fame.
 
 ## Visualizations :camera:
 Visualizations were created in Tableau to demonstrate how rare it is to be inducted to the Baseball Hall of Fame, and how it has become even more difficult to be competitive over time. A snapshot of these visualizations will be shown on the web app. 
