@@ -76,6 +76,8 @@ Fangraphs is another widely used site for historical baseball data, with a focus
 
 ## Data Exploration :satellite:
 
+First we were analyzing baseball data that was within the Kaggle database.  Once we discovered there was a source that included more recent information we decided that the Sean Lahman's Baseball database would be more effective in analysis. In order to make sure that our main source of data was going to be accurate, we used the Baseball Reference site to compare stats and ensure more accurate information. In order to make predictions we reference another site, Fangraphs, as we were able to build tables and manipulate data.
+
 ### Extract, Transform, Load
 
 Batting ETL:
@@ -194,6 +196,21 @@ This chart illustrates the increasing rarity of which players get inducted into 
 
 This bar chart visualization shows total number of players inducted to the HOF in baseball history, total number of players nominated but not inducted to the HOF, and lastly (also by far most commonly) all other players. This visualization helps to clarify and separate the nominees who did and did not get in to the HOF.
 
+![image](h_app/static/Images/final/HOF_Circle.png)
+
+The above circle chart shows the density of players elected and the density of players nominated for Hall of Fame induction relative to the total number of players in baseball history. This visualization puts into perspective the rarity of even being nominated as a potential Hall of Famer. The “bullseye” of this graph then illustrates the rarity within that nominee group to become fully inducted.
+
+
+![image](h_app/static/Images/final/HOF_yes_no.png)
+
+ The above shows the number of Hall of Fame nominees versus the number of those nominees who were actually inducted. As the slope of nominees seems to increase - the slope inductees remains relatively the same. This further indicates the increased rarity of being Hall of Fame induction over time.
+
+
+![image](h_app/static/Images/final/Time_On_Ballot_YN.png)
+
+It is showcased above that there seems to be an inverse relationshipp between years of Hall Of Fame nomination and chance of induction. Although there is a higher number of players who were nominated once, their odds of induction are low. Although players are less likely to receive multiple nominations - they seem more likely to be inducted the more nominations they receive.  
+
+
 ## Deployment :inbox_tray:
 For User-Facing purposes - technologies implemented were a combination of
 
@@ -258,7 +275,10 @@ Continuous code can be committed to the repository and then deployed within the 
 
 
 ## Future Advancements :rocket:
-- 
+Our Hall of Fame predictor is only the starting point of how we are able to predict and analyze players in a different way. We eventually want to expand our product to assist coaches of all sports to make sure players that have a high performance rate are not over looked.  Not only will it bring light to overlooked players, but the sooner misbehavior is addressed the higher potential all athletes will have. 
+
+* Expand to other sports, awards, all star teams
+* Prediction table to display odds of players being inducted 
 
 ## Credits :bookmark_tabs:
 
