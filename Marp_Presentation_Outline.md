@@ -18,10 +18,6 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
-img[alt~="right"] {
-  display: block;
-  margin: 200;
-}
 </style>
 
 # Overview 
@@ -124,6 +120,10 @@ https://hall-of-fame-baseball.herokuapp.com/
   - h_app, html files, Procfile, requirements, wsgi
 
 ---
+### Code to Filter Interactive Table
+![center](Images/js_filtering.jpg)
+
+---
 # Pitch & Selling Points
 - Tool for fans and professionals to evaluate players' Hall of Fame case based solely on their on-field production, with a high degree of accuracy
 - Sell to baseball teams for drafting players or Hall of Fame electors 
@@ -132,8 +132,10 @@ https://hall-of-fame-baseball.herokuapp.com/
 
 ---
 # Future Advancements
-- Expand to other sports, awards, all star teams
+- Expand to other sports, awards, 
+- Predict all star teams
 - Prediction table to display odds of players being inducted
+- Work on style CSS to be more user friendly and clean
 
 ---
 # Thank you for your attention.
