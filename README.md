@@ -69,14 +69,19 @@ The following various technologies will be used throughout the completion of thi
 
 [Baseball-Reference.com: MLB Stats, Scores, History, and Records](https://www.baseball-reference.com/ "Baseball-Reference.com")
 
+Lahman’s baseball database is an open source archive of baseball statistics from as far back as 1871, all the way up to present day (2020 season). Datasets are supplied in many varieties by Lahman. Tables with historical batting stats for all players (1872-2020), pitching statistics for pitchers, and even a table of player’s Hall of Fame induction opportunities. Sean Lahman is an acclaimed journalist for USA Today, and baseball research analyst for companies like ESPN.
 
 [Sean Lahman's Baseball Database](http://www.seanlahman.com/baseball-archive/statistics/ "Sean Lahman's Baseball Database")
 
+baseball-reference.com is a website that hosts baseball stats and history. It is widely considered as an industry-standard source of statistical data for baseball. Although the data on baseball-reference is pay to use, the site gave valuable insight in our discovery phase regarding what downloadable and standardized datasets we should be looking for and what features we may look to create. The site even lists Lahman’s open source project for those who want a large volume of data/statistics for free.
 
 [Baseball Hall](https://baseballhall.org/)
 
+The baseball hall of fame’s website was used as a resource for image collection and news updates. The team also used the official site to assess a hall of fame-centric site’s features.
 
 [Fangraphs](https://www.fangraphs.com/)
+
+Fangraphs is another widely used site for historical baseball data. One helpful feature of Fangraphs is that it offers the ability to build out tables/reports and save those reports locally. To create a table of upcoming Hall of Fame ballots (2021, 2022), the players eligible were taken from baseball-reference and then turned into a table in order to run the machine learning model to predict future inductees.
 
 
 ## Data Exploration
