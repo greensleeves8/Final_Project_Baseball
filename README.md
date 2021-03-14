@@ -22,8 +22,8 @@ Taking into consideration the process and requirements of being inducted into th
 
 ## Our Product
 
-[Our Presentation](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Marp_Presentation_Powerpoint.pdf)
-[Our Web App](https://hall-of-fame-baseball.herokuapp.com/)
+- [Our Presentation](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Marp_Presentation_Powerpoint.pdf)
+- [Our Web App](https://hall-of-fame-baseball.herokuapp.com/)
 
 Membership in the National Baseball Hall of Fame is considered one of the highest honors in all of sports. Of the roughly 20,000 players in history to appear in a Major League game, 
 only 263 have been elected to the Hall as players (1.3%). In fact, gaining entrance to the hall seems to become more difficult over time. After the 1970 season, 1.9% of players in history
