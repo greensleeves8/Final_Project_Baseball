@@ -22,6 +22,9 @@ Taking into consideration the process and requirements of being inducted into th
 
 ## Our Product
 
+[Our Presentation](https://github.com/greensleeves8/Final_Project_Baseball/blob/main/Marp_Presentation_Powerpoint.pdf)
+[Our Web App](https://hall-of-fame-baseball.herokuapp.com/)
+
 Membership in the National Baseball Hall of Fame is considered one of the highest honors in all of sports. Of the roughly 20,000 players in history to appear in a Major League game, 
 only 263 have been elected to the Hall as players (1.3%). In fact, gaining entrance to the hall seems to become more difficult over time. After the 1970 season, 1.9% of players in history
 had gained entrance to the hall, meaning that under 1% of players since that point have been elected. The task of electing players to the hall has become more and more difficult over time
@@ -85,7 +88,7 @@ Batting ETL:
 - When creating our Career_Batting_df we started by reading in the Batting.csv and HallOfFame.csv from Sean Lahman's Baseball Database. 
 The HallOfFame dataframe was then filtered to only include members inducted as players, omitting executives/pioneers, managers, and umpires.
 In order to clean up the data, we took out columns that had high null values (CS, IBB, GIDP). Individual player seasons were then grouped together
-to create a dataframe of career batting statistics, and then the 'yearID' and 'stint' columns were dropped from the dataframe, and new columns were created to add several key statistics (Batting Average(AVG), On Base Percentage(OBP), and Slugging Percentage(SLG)). Further remaining null values
+to create a dataframe of career batting statistics, and then the 'yearID' and 'stint' columns were dropped from the dataframe, and new columns were created to add several key statistics (Batting Average (AVG), On Base Percentage (OBP), and Slugging Percentage (SLG)). Further remaining null values
 in the dataframe were then replaced with zeroes. At this point the career batting dataframe and Hall of Fame dataframe were merged together
 to create a new dataframe of career statistics with Hall of Fame status included. This dataframe was then filtered to omit players who had never had an official MLB at-bat. Finally, 
 an additional level of filtering was added to omit pitchers inducted to the Hall of Fame from the batting database, as their inclusion would otherwise
