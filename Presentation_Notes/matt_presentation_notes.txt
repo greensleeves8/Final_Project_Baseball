@@ -1,0 +1,46 @@
+OVERVIEW
+•	Proposal
+•	Resources
+•	Technologies Used
+•	Web App- Live Demo
+•	Process (ETL, Database, Machine Learning, Visualizations, Deployment and Heroku)
+•	Pitch and Selling Points
+•	Future Advancements
+
+Use of a Supervised Machine Learning Model to predict future inductees to the Baseball Hall of Fame based on known inductees and their recorded stats.
+
+Slide 1 (what we needed/aimed for in a model).
+
+When presented with our proposal and goal of being able to accurately predict former and future Baseball Hall of Fame inductees, a machine learning model was needed that could perform well with imbalanced datasets.
+Multiple classification models with differing sampling methods were developed and tested prior to deciding upon the final model.
+The same preprocessing steps were taken before the training and testing of each model- which was minimal due to much of the heavy lifting having been completed during the ETL phase of the project.
+The main step that took place to prepare our dataset for the model was to convert the inducted status of baseball players from a Y and N (for Yes and No) to a 1 and 0 respectively.
+This enabled our model to appropriately classify our dataset and make predictions. 
+
+ Slide 2 (feature importance and heatmap)
+
+Once some of the initial testing was completed a feature importance correlation matrix was used to reduce the number of noisy features within our dataset (e.g. Batters Faced was completely collinear with Balks and Games Finished).  
+
+Slide 3 (comparison chart of models tested)
+
+Testing and training of the various models explored was initially completed on our batting dataset and then the top performing model was applied to the pitching dataset.
+The compiled results for comparison can be seen in the table displayed.  
+
+The first model we started with was a Random Forest Classifier, a great starting model because it handled our dataset well and easily provided us with our desired output of predicted values.
+When evaluated it scored 99.2% accuracy, 0.63 precision for yes’, and 0.44 recall for yes’.
+Its accuracy score was extremely high (not difficult with such an imbalanced dataset) and it scored better with precision vs. recall.
+This was the main reason we sought a different model, one was needed with a stronger recall score- it needed to be able to find inductees within a dataset that primarily consisted of ineligible candidates.
+A logistic regression model was also tested with setting the threshold to 75% in hopes of developing a model that took into consideration the requirement for 75% of the votes to be inducted.
+Unfortunately, this model did not have a strong recall score either and severely reduced the number of correct predictions.
+The final model, which performed the best, was a XGBoost classification model combined with SMOTE to address the class imbalance present within our dataset.
+This particular model has been designed to maximize efficiency and flexibility.
+The XGBoost classification model had the highest recall score of all models tested while not sacrificing too much precision.
+This model performed with 0.77 recall score and a 0.46 precision score. 
+
+Slide 4 (2022 Batters Ballot)
+
+Upon finalizing the machine learning model, the predictions vs. known inducted status were compared.
+The results were filtered into dataframes representing the likely ballots for 2021, 2022, and 2023.
+The players predicted by our model are very likely to become future Baseball Hall of Famers (e.g. Barry Bonds and Alex Rodriguez).
+In addition, former baseball players that may or may not have been considered as inductees into the Hall of Fame (e.g. Tommy Corcoran and Steve Brodie) were predicted to be in the Hall of Fame.
+This highlights our model’s ability to identify statistical talent of eligible baseball players,  but making incorrect predictions due to external factors that the model was not tested with such as contributions to baseball as a sport and competition of other high profile players of the same era.  
